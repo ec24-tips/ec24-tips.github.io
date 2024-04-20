@@ -1,0 +1,32 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+html, body, #main {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+#map, #pane {
+    transition: height 0.5s ease-out;
+}
+
+#map {
+    height: 100vh;
+}
+
+#pane {
+    height: 0vh;
+    border-top: solid thin gray;
+    border-radius: 4px;
+    background-color: white;
+    padding: 0 4px;
+    overflow-y: scroll;
+}
+
+#main.open #map, #main.open #pane {
+    height: 50vh;
+}
+

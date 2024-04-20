@@ -1,0 +1,39 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Almodo Bar",
+                "category": "food",
+                "tags": ["restaurant", "bar", "lunch", "dinner"],
+                "description": "<p>Real Spanish tapas at real Zürich prices! Large choice of drinks.</p>",
+                "recommenders": ["Luca"]
+            },
+            "geometry": {
+                "coordinates": [
+                    8.533386874644464,
+                    47.36696768093992
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Wild Bowls",
+                "category": "food",
+                "tags": ["restaurant", "lunch", "vegan"],
+                "description": "<p>Bowls. What else did you expect? Not sure what's wild about them.</p>",
+                "recommenders": ["Luca"]
+            },
+            "geometry": {
+                "coordinates": [
+                    8.534307376508906,
+                    47.36779827855503
+                ],
+                "type": "Point"
+            }
+        }
+    ]
+}
