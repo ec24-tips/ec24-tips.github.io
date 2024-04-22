@@ -4,8 +4,8 @@ body {
 }
 
 html, body, #main {
-    height: 100vh;
-    width: 100vw;
+    height: 100dvh;
+    width: 100dvw;
     overflow: hidden;
 }
 
@@ -14,11 +14,11 @@ html, body, #main {
 }
 
 #map {
-    height: 100vh;
+    height: 100dvh;
 }
 
 #pane {
-    height: 0vh;
+    height: 0dvh;
     border-top: solid thin gray;
     border-radius: 4px;
     background-color: white;
@@ -27,6 +27,12 @@ html, body, #main {
 }
 
 #main.open #map, #main.open #pane {
-    height: 50vh;
+    height: 50dvh;
 }
 
+.leaflet-marker-icon.selected {
+    font-weight: bold;
+}
+.leaflet-marker-icon.hidden {
+    display: none;
+}
