@@ -1,14 +1,5 @@
-const map = L.map('map').setView([47.3717315, 8.5420985], 15);
-const main = document.querySelector('#main');
-
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(map);
-L.control.scale().addTo(map);
-
 class Marker extends L.Marker {
-    #props;
+    props;
     #thumbnail;
     #card;
     
@@ -25,7 +16,7 @@ class Marker extends L.Marker {
 	    icon: Marker.catIcons[props.category] || L.Icon.Default,
 	    alt: props.name,
 	});
-	this.#props = props;
+	this.props = props;
 	this.tags = new Set(props.tags);
 	this.tags.add(props.category);
 	this.selected = this.hidden = false;
@@ -58,7 +49,7 @@ class Marker extends L.Marker {
 	    return this.#thumbnail;
 	this.#thumbnail = document.createElement('div');
 	this.#thumbnail.className = 'thumbnail';
-	this.#thumbnail.innerHTML = `<h3>${this.#props.name}</h3>`;
+	this.#thumbnail.innerHTML = `<h3>${this.props.name}</h3>`;
 	return this.#thumbnail;
     }
 
@@ -67,19 +58,28 @@ class Marker extends L.Marker {
 	    return this.#card;
 	this.#card = document.createElement('div');
 	this.#card.className = 'card';
-	this.#card.innerHTML = `<h3>${this.#props.name}</h3>${this.#props.description}`;
+	this.#card.innerHTML = `<h3>${this.props.name}</h3>${this.props.description}`;
 	return this.#card;
     }
 }
 
 class MarkerCollection extends Array {
     #tags = new Map();
+    #index = new Fuse([], {
+	includeScore: true,
+	threshold: 0.49,
+	keys: ['value'],
+    });
     
     tag(key) {
 	let markers = this.#tags.get(key);
 	if (!markers) {
 	    markers = new Array();
 	    this.#tags.set(key, markers);
+	    this.#index.add({
+		type: 'tag',
+		value: '#' + key,
+	    });
 	}
 	return markers;
     }
@@ -88,22 +88,57 @@ class MarkerCollection extends Array {
 	this.push(marker);
 	for (let m of marker.tags)
 	    this.tag(m).push(marker);
+	this.#index.add({
+	    type: 'marker',
+	    marker: marker,
+	    value: marker.props.name,
+	});
+    }
+
+    search(pattern) {
+	return this.#index.search(pattern)
     }
 }
 
-map._drawer = new class {
+const app = new class {
     #activeMarker;
     #markers = new MarkerCollection();
     
-    constructor(container, map) {
+    constructor(container, features) {
 	this.container = container;
-	this.map = map;
-	this.pane = this.container.querySelector('#pane');
-	this._open = false;
+	this.container.innerHTML = `<div id="map"></div>
+<div id="pane">
+  <div id="list"></div>
+  <div id="result"></div>
+</div>`;
+
+	this.map = L.map(this.container.querySelector('#map'))
+	    .setView([47.3717315, 8.5420985], 15);
 	
-	map.on('click', (e) => this.close());
+	this.list = this.container.querySelector('#list');
+	this.result = this.container.querySelector('#result');
+	this._open = false;
+
+	L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	    maxZoom: 19,
+	    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+	}).addTo(this.map);
+	L.control.scale().addTo(this.map);
+
+	(async (url) => {
+	    const res = await fetch(url);
+	    const features = await res.json();
+	    
+	    L.geoJSON(features, {
+		pointToLayer: (point, latlng) => this.addMarker(latlng, point.properties),
+	    }).addTo(this.map);
+	})(features);
+	
+	this.map.on('click', (e) => this.close());
 	this.container.addEventListener('transitionend',
 					(e) => this.map.invalidateSize());
+
+	this.renderList();
     }
     
     addMarker(latlng, props) {
@@ -155,23 +190,29 @@ map._drawer = new class {
 	this.#markers.tag(tag).forEach((m) => m.show());	
     }
 
+    renderList() {
+	this.list.innerHTML = `
+<input id="search" list="search-results" type="search" />
+<datalist id="search-results"></datalist>
+<div id="active-tags"><div>
+<div id="active-markers"><div>
+`;
+	this.search = this.list.querySelector('#search');
+	this.search_results = this.list.querySelector("#search-results");
+	this.search.addEventListener('input', (e) => {
+	    this.search_results.innerHTML = '';
+	    for (let res of this.#markers.search(this.search.value)) {
+		this.search_results.innerHTML +=
+		    `<option value="${res.item.value}" class="${res.item.type}"></option>`;
+	    }
+	});
+	this.search.addEventListener('change', (e) => console.log(this.search.value));
+    }
+
     renderPane(marker) {
-	this.pane.replaceChildren(marker.card);
+	this.result.replaceChildren(marker.card);
     }
-
-    render() {
-	
-    }
-}(main, map);
-
-(async function() {
-    const res = await fetch("features.json");
-    const features = await res.json();
-
-    L.geoJSON(features, {
-	pointToLayer: (point, latlng) => map._drawer.addMarker(latlng, point.properties),
-    }).addTo(map);
-})();
+}(document.querySelector('#main'), "features.json");
 
 
 /* Geolocation */
