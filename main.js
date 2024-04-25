@@ -16,21 +16,22 @@ class Marker extends L.Marker {
 	    icon: Marker.catIcons[props.category] || L.Icon.Default,
 	    alt: props.name,
 	});
-	this.latlng = latlng;
+	this.latlng = latlng;	
 	this.props = props;
+	this.uid = this.props.uid;
 	this.tags = new Set(props.tags);
 	this.tags.add(props.category);
-	this.selected = this.hidden = false;
+	this.active = this.hidden = false;
     }
     
-    select() {
-	this.selected = true;
-	this._icon.classList.add('selected');
+    activate() {
+	this.active = true;
+	this._icon.classList.add('active');
     }
 
-    unselect() {
-	this.selected = false;
-	this._icon.classList.remove('selected');
+    deactivate() {
+	this.active = false;
+	this._icon.classList.remove('active');
     }
 
     hide() {
@@ -77,7 +78,7 @@ class Marker extends L.Marker {
     }
 }
 
-class MarkerCollection extends Array {
+class MarkerCollection extends Map {
     #tags = new Map();
     #index = new Fuse([], {
 	includeScore: true,
@@ -103,7 +104,7 @@ class MarkerCollection extends Array {
     }
 
     insert(marker) {
-	this.push(marker);
+	this.set(marker.uid, marker);
 	for (let m of marker.tags)
 	    this.tag(m).push(marker);
 	this.#index.add({
@@ -120,20 +121,39 @@ class MarkerCollection extends Array {
 
 const app = new class {
     #markers = new MarkerCollection();
-    #state;
+    #state = {
+	pane_open: false,
+	activeMarker: null,
+	activeTags: [],
+    };
+
+    #setState(state) {
+	if (state?.pane_open !== undefined)
+	    this.#state.pane_open = state.pane_open;
+	if (state?.activeTags !== undefined)
+	    this.#state.activeTags = state.activeTags;
+	if (state?.activeMarker !== undefined)
+	    this.activeMarker = this.#markers.get(state.activeMarker) ?? null;
+    }
+
+    #setStateFromUID(uid) {
+	this.#setState({ activeMarker: uid });
+	this.#state.pane_open = Boolean(this.#state.activeMarker);
+    }
     
     constructor(container, features) {
-	this.#state = {
-	    pane_open: false,
-	    activeMarker: null,
-	    activeTags: [],
-	};
 	this.DOM = {};
 	this.DOM.container = container;
 	this.populateDOM();
 	this.createMap();
 	this.activateSearch();
-	this.populateMap(features);
+	window.addEventListener('popstate', (e) => this.restoreState(e.state));
+	this.populateMap(features).then(() => {
+	    if (location.hash)
+		this.#setStateFromUID(location.hash.substr(1));
+	    this.reflectState();
+	    history.replaceState(this.#state, "");
+	});
     }
 
     populateDOM() {
@@ -199,36 +219,68 @@ const app = new class {
 	return m;
     }
 
-    open(marker) {
+    get activeMarker() {
+	return this.#state.activeMarker && this.#markers.get(this.#state.activeMarker);
+    }
+
+    set activeMarker(marker) {
+	this.activeMarker?.deactivate();
 	if (marker) {
-	    this.DOM.container.classList.add('marker-view');
-	    marker.select()
-	    this.DOM.result.replaceChildren(marker.card);
-	    if (!this.#state.pane_open)
-		this.map.once('resize', () => this.map.panTo(marker.getLatLng()));
-	    else
-		this.map.panTo(marker.getLatLng())
-	    this.#state.activeMarker = marker;	
+	    this.#state.activeMarker = marker.uid;
+	    marker.activate();
 	} else {
-	    this.#state.activeMarker?.unselect();
 	    this.#state.activeMarker = null;
 	}
-	
-	this.DOM.container.classList.add('open');
+    }
+
+    open(marker) {
+	this.activeMarker = marker;
 	this.#state.pane_open = true;
-	history.pushState(this.#state, "", "");
+	this.reflectState();
+	this.saveState();
     }
 
     close() {
-	this.DOM.container.classList.remove('open');
+	this.activeMarker = null;
 	this.#state.pane_open = false;
-	
-	this.DOM.container.classList.remove('marker-view');
-	this.#state.activeMarker?.unselect();
-	this.#state.activeMarker = null;
-	history.pushState(this.#state, "", "");
+	this.reflectState();
+	this.saveState();
     }
 
+    // Call after a state change to update UI
+    reflectState() {
+	const wasClosed = !this.DOM.container.classList.contains('open');
+	if (this.DOM.container.classList.toggle('open', this.#state.pane_open)) {
+	    if (this.activeMarker) {
+		this.DOM.result.replaceChildren(this.activeMarker.card);
+		const pan = () => this.map.panTo(this.activeMarker.getLatLng())
+		wasClosed ? this.map.once('resize', pan) : pan();
+		this.DOM.container.classList.add('marker-view');
+	    } else {
+		this.DOM.container.classList.remove('marker-view');
+	    }
+	}
+    }
+
+    // Save state in history
+    saveState() {
+	if (JSON.stringify(this.#state) != JSON.stringify(history.state)) {
+	    history.pushState(this.#state, '', '#' + (this.#state.activeMarker || ''));
+	}
+    }
+
+    // Restore to a previous state
+    restoreState(state) {
+	if (state === null) {
+	    // when hash changes a null state is popped
+	    this.#setStateFromUID(location.hash.substr(1));
+	    this.reflectState();
+	} else if (JSON.stringify(this.#state) != JSON.stringify(state)) {
+	    this.#setState(state);
+	    this.reflectState();
+	}
+    }
+    
     hideAll() {
 	this.#markers.forEach((m) => m.hide());
     }
