@@ -30,6 +30,11 @@ html, body, #main {
     height: 50dvh;
 }
 
+#main:not(.marker-view) #result,
+#main.marker-view #list {
+    display: none;
+}
+
 .leaflet-marker-icon.selected {
     font-weight: bold;
 }

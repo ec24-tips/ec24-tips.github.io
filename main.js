@@ -7,7 +7,7 @@ class Marker extends L.Marker {
     catIcons = {
 	'food': L.divIcon({
 	    html: 'M',
-	    className: 'food',
+	    className: 'cat-food',
 	}),
     }
     
@@ -16,6 +16,7 @@ class Marker extends L.Marker {
 	    icon: Marker.catIcons[props.category] || L.Icon.Default,
 	    alt: props.name,
 	});
+	this.latlng = latlng;
 	this.props = props;
 	this.tags = new Set(props.tags);
 	this.tags.add(props.category);
@@ -48,8 +49,12 @@ class Marker extends L.Marker {
 	if (this.#thumbnail)
 	    return this.#thumbnail;
 	this.#thumbnail = document.createElement('div');
-	this.#thumbnail.className = 'thumbnail';
-	this.#thumbnail.innerHTML = `<h3>${this.props.name}</h3>`;
+	this.#thumbnail.className = `thumbnail cat-${this.props.category}`;
+	this.#thumbnail.innerHTML = `
+<h3>${this.props.name}</h3>
+<ul class="tags">
+  ${ [...this.tags.values()].map((t) => `<li><button>#${t}</button></li>`).join('') }
+</ul>`;
 	return this.#thumbnail;
     }
 
@@ -57,8 +62,17 @@ class Marker extends L.Marker {
 	if (this.#card)
 	    return this.#card;
 	this.#card = document.createElement('div');
-	this.#card.className = 'card';
-	this.#card.innerHTML = `<h3>${this.props.name}</h3>${this.props.description}`;
+	this.#card.className = `card cat-${this.props.category}`;
+	this.#card.innerHTML = `
+<h3>${this.props.name}</h3>
+<ul class="tags">
+  ${ [...this.tags.values()].map((t) => `<li><button>#${t}</button></li>`).join('') }
+</ul>
+<p>${this.props.description}</p>
+<p class="recommended-by">Recommended by: ${this.props.recommenders.join()}</p>
+`;
+	const geo = `geo:${this.latlng.lat},${this.latlng.lng}`;
+	this.#card.innerHTML += `<p><a href="${geo}">${geo}</a></p>`;
 	return this.#card;
     }
 }
@@ -84,6 +98,10 @@ class MarkerCollection extends Array {
 	return markers;
     }
 
+    tags() {
+	return this.#tags.keys();
+    }
+
     insert(marker) {
 	this.push(marker);
 	for (let m of marker.tags)
@@ -101,77 +119,114 @@ class MarkerCollection extends Array {
 }
 
 const app = new class {
-    #activeMarker;
     #markers = new MarkerCollection();
+    #state;
     
     constructor(container, features) {
-	this.container = container;
-	this.container.innerHTML = `<div id="map"></div>
+	this.#state = {
+	    pane_open: false,
+	    activeMarker: null,
+	    activeTags: [],
+	};
+	this.DOM = {};
+	this.DOM.container = container;
+	this.populateDOM();
+	this.createMap();
+	this.activateSearch();
+	this.populateMap(features);
+    }
+
+    populateDOM() {
+	this.DOM.container.innerHTML = `<div id="map"></div>
 <div id="pane">
-  <div id="list"></div>
+  <div id="list">
+    <input id="search" list="search-results" type="search" />
+    <datalist id="search-results"></datalist>
+    <div id="active-tags"></div>
+    <div id="markers"></div>
+  </div>
   <div id="result"></div>
 </div>`;
 
-	this.map = L.map(this.container.querySelector('#map'))
+	this.DOM.list = this.DOM.container.querySelector('#list');
+	this.DOM.result = this.DOM.container.querySelector('#result');
+	this.DOM.search = this.DOM.list.querySelector('#search');
+	this.DOM.search_results = this.DOM.list.querySelector("#search-results");
+	this.DOM.active_tags = this.DOM.list.querySelector('#active-tags');
+	this.DOM.markers = this.DOM.list.querySelector('#markers');
+    }
+
+    createMap() {
+	this.map = L.map(this.DOM.container.querySelector('#map'))
 	    .setView([47.3717315, 8.5420985], 15);
 	
-	this.list = this.container.querySelector('#list');
-	this.result = this.container.querySelector('#result');
-	this._open = false;
-
 	L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	    maxZoom: 19,
 	    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 	}).addTo(this.map);
 	L.control.scale().addTo(this.map);
 
-	(async (url) => {
-	    const res = await fetch(url);
-	    const features = await res.json();
-	    
-	    L.geoJSON(features, {
-		pointToLayer: (point, latlng) => this.addMarker(latlng, point.properties),
-	    }).addTo(this.map);
-	})(features);
-	
 	this.map.on('click', (e) => this.close());
-	this.container.addEventListener('transitionend',
+	this.DOM.container.addEventListener('transitionend',
 					(e) => this.map.invalidateSize());
+    }
 
-	this.renderList();
+    activateSearch() {
+	this.DOM.search.addEventListener('input', (e) => {
+	    this.DOM.search_results.innerHTML = '';
+	    for (let res of this.#markers.search(this.DOM.search.value)) {
+		this.DOM.search_results.innerHTML +=
+		    `<option value="${res.item.value}" class="${res.item.type}"></option>`;
+	    }
+	});
+	this.DOM.search.addEventListener('change', (e) => console.log(this.DOM.search.value));
+    }
+    
+    async populateMap(url) {
+	const res = await fetch(url);
+	const features = await res.json();
+	
+	L.geoJSON(features, {
+	    pointToLayer: (point, latlng) => this.addMarker(latlng, point.properties),
+	}).addTo(this.map);
     }
     
     addMarker(latlng, props) {
 	const m = new Marker(latlng, props);
 	m.on('click', (e) => this.open(m));
 	this.#markers.insert(m);
+	this.DOM.markers.appendChild(m.thumbnail);
 	return m;
     }
 
     open(marker) {
 	if (marker) {
-	    if (this.#activeMarker)
-		this.#activeMarker.unselect()
+	    this.DOM.container.classList.add('marker-view');
 	    marker.select()
-	    this.renderPane(marker);
-	    if (!this._open)
+	    this.DOM.result.replaceChildren(marker.card);
+	    if (!this.#state.pane_open)
 		this.map.once('resize', () => this.map.panTo(marker.getLatLng()));
 	    else
 		this.map.panTo(marker.getLatLng())
-	    this.#activeMarker = marker;	
+	    this.#state.activeMarker = marker;	
+	} else {
+	    this.#state.activeMarker?.unselect();
+	    this.#state.activeMarker = null;
 	}
 	
-	this.container.classList.add('open');
-	this._open = true;
+	this.DOM.container.classList.add('open');
+	this.#state.pane_open = true;
+	history.pushState(this.#state, "", "");
     }
 
     close() {
-	this.container.classList.remove('open');
-	this._open = false;
+	this.DOM.container.classList.remove('open');
+	this.#state.pane_open = false;
 	
-	if (this.#activeMarker)
-	    this.#activeMarker.unselect();
-	this.#activeMarker = null;
+	this.DOM.container.classList.remove('marker-view');
+	this.#state.activeMarker?.unselect();
+	this.#state.activeMarker = null;
+	history.pushState(this.#state, "", "");
     }
 
     hideAll() {
@@ -188,29 +243,6 @@ const app = new class {
     
     show(tag) {
 	this.#markers.tag(tag).forEach((m) => m.show());	
-    }
-
-    renderList() {
-	this.list.innerHTML = `
-<input id="search" list="search-results" type="search" />
-<datalist id="search-results"></datalist>
-<div id="active-tags"><div>
-<div id="active-markers"><div>
-`;
-	this.search = this.list.querySelector('#search');
-	this.search_results = this.list.querySelector("#search-results");
-	this.search.addEventListener('input', (e) => {
-	    this.search_results.innerHTML = '';
-	    for (let res of this.#markers.search(this.search.value)) {
-		this.search_results.innerHTML +=
-		    `<option value="${res.item.value}" class="${res.item.type}"></option>`;
-	    }
-	});
-	this.search.addEventListener('change', (e) => console.log(this.search.value));
-    }
-
-    renderPane(marker) {
-	this.result.replaceChildren(marker.card);
     }
 }(document.querySelector('#main'), "features.json");
 
