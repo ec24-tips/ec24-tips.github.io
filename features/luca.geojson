@@ -4,7 +4,6 @@
         {
             "type": "Feature",
             "properties": {
-                "uid": "almodobar",
                 "name": "Almodo Bar",
                 "category": "food",
                 "tags": ["restaurant", "bar", "lunch", "dinner"],
@@ -22,7 +21,6 @@
         {
             "type": "Feature",
             "properties": {
-                "uid": "wildbowls",
                 "name": "Wild Bowls",
                 "category": "food",
                 "tags": ["restaurant", "lunch", "vegan"],
