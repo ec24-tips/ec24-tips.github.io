@@ -1,0 +1,9 @@
+{
+    "name": "EC24 Local Tips",
+    "description": "Local tips for Eurocrypt 2024",
+    "display": "standalone",
+    "background_color": "#fff",
+    "start_url": ".",
+    "icons": [
+    ]
+}
