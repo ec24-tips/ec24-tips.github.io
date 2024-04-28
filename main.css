@@ -35,9 +35,29 @@ html, body, #main {
     display: none;
 }
 
+.leaflet-marker-icon {
+    font-variation-settings: 'FILL' 0, 'wght' 200;
+    color: #55f;
+    text-shadow: 0 0 5px #55f;
+    background-color: #fff9;
+    border-radius: 14px;
+    border: solid thin #55f5;
+    padding: 2px;
+}
 .leaflet-marker-icon.active {
-    font-weight: bold;
+    font-variation-settings: 'FILL' 0, 'wght' 600;
+    color: #00f;
+    background-color: #fffe;
+    border: solid thin #00f;
 }
 .leaflet-marker-icon.hidden {
     display: none;
 }
+
+.icon::before { content: "\eb8b"; }
+.icon.cat-restaurant::before { content: "\e56c"; }
+.icon.cat-bar::before { content: "\e540"; }
+.icon.cat-hike::before { content: "\e50a"; }
+.icon.cat-sightseeing::before { content: "\e84f"; }
+.icon.cat-viewpoint::before { content: "\e3f7"; }
+.icon.cat-conference::before { content: "\e80c"; }

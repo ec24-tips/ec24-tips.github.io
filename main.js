@@ -3,17 +3,12 @@ class Marker extends L.Marker {
     #thumbnail;
     #card;
     
-    static
-    catIcons = {
-	'food': L.divIcon({
-	    html: 'M',
-	    className: 'cat-food',
-	}),
-    }
-    
     constructor(latlng, props) {
 	super(latlng, {
-	    icon: Marker.catIcons[props.category] || L.Icon.Default,
+	    icon:  L.divIcon({
+		className: `material-symbols-outlined icon cat-${props.category}`,
+		iconSize: '28px',
+	    }),
 	    alt: props.name,
 	});
 	this.latlng = latlng;	

@@ -5,8 +5,8 @@
             "type": "Feature",
             "properties": {
                 "name": "Almodo Bar",
-                "category": "food",
-                "tags": ["restaurant", "bar", "lunch", "dinner"],
+                "category": "bar",
+                "tags": ["restaurant", "lunch", "dinner"],
                 "description": "<p>Real Spanish tapas at real Zürich prices! Large choice of drinks.</p>",
                 "recommenders": ["Luca"]
             },
@@ -22,8 +22,8 @@
             "type": "Feature",
             "properties": {
                 "name": "Wild Bowls",
-                "category": "food",
-                "tags": ["restaurant", "lunch", "vegan"],
+                "category": "restaurant",
+                "tags": ["lunch", "vegan"],
                 "description": "<p>Bowls. What else did you expect? Not sure what's wild about them.</p>",
                 "recommenders": ["Luca"]
             },
