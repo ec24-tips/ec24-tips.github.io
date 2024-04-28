@@ -177,7 +177,7 @@ const app = new class {
 	
 	L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	    maxZoom: 19,
-	    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+	    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> | <img src="assets/github-mark.svg" width="10" height="10"> <a href="https://github.com/ec24-tips/ec24-tips.github.io/">Contribute</a>',
 	}).addTo(this.map);
 	L.control.scale().addTo(this.map);
 
