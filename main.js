@@ -3,7 +3,7 @@ class Marker extends L.Marker {
     #thumbnail;
     #card;
     
-    constructor(latlng, props) {
+    constructor(latlng, uid, props) {
 	super(latlng, {
 	    icon:  L.divIcon({
 		className: `material-symbols-outlined icon cat-${props.category}`,
@@ -12,8 +12,8 @@ class Marker extends L.Marker {
 	    alt: props.name,
 	});
 	this.latlng = latlng;	
+	this.uid = uid;
 	this.props = props;
-	this.uid = this.props.uid;
 	this.tags = new Set(props.tags);
 	this.tags.add(props.category);
 	this.active = this.hidden = false;
@@ -202,12 +202,12 @@ const app = new class {
 	const features = await res.json();
 	
 	L.geoJSON(features, {
-	    pointToLayer: (point, latlng) => this.addMarker(latlng, point.properties),
+	    pointToLayer: (point, latlng) => this.addMarker(latlng, point.id, point.properties),
 	}).addTo(this.map);
     }
     
-    addMarker(latlng, props) {
-	const m = new Marker(latlng, props);
+    addMarker(latlng, uid, props) {
+	const m = new Marker(latlng, uid, props);
 	m.on('click', (e) => this.open(m));
 	this.#markers.insert(m);
 	this.DOM.markers.appendChild(m.thumbnail);
