@@ -10,11 +10,12 @@ function e(strings, ...values) {
     return res;
 }
 
+
 class Marker extends L.Marker {
     props;
     #thumbnail;
     #card;
-    
+
     constructor(latlng, uid, props) {
 	super(latlng, {
 	    icon:  L.divIcon({
@@ -23,7 +24,6 @@ class Marker extends L.Marker {
 	    }),
 	    alt: props.name,
 	});
-	this.latlng = latlng;	
 	this.uid = uid;
 	this.props = props;
 	this.tags = new Set(props.tags);
@@ -78,16 +78,8 @@ class Marker extends L.Marker {
   <span>${this.props.name}</span>
 </h3>`;
 	
-	if (navigator.share) {
-	    this.#card.innerHTML += '<div class="material-symbols-outlined share">&#xe80d;</div>';
-	    this.#card.lastChild.addEventListener('click', async () => {
-		await navigator.share({
-		    'title': this.props.name,
-		    'text': this.props.name,
-		    'url': new URL('#' + this.uid, location),
-		});
-	    });
-	}
+	if (navigator.share)
+	    this.#card.innerHTML += '<button class="material-symbols-outlined share">&#xe80d;</button>';
 	
 	this.#card.innerHTML += `
 <ul class="tags">
@@ -103,8 +95,17 @@ class Marker extends L.Marker {
 <ul class="links">
   ${ this.props.links.map((l) => e`<li><a href="l">l</a></li>`).join('') }
 </ul>`;
-	const geo = `geo:${this.latlng.lat},${this.latlng.lng}`;
+	const geo = `geo:${this._latlng.lat},${this._latlng.lng}`;
 	this.#card.innerHTML += `<p class="geo-link"><a href="${geo}">${geo}</a></p>`;
+
+	if (navigator.share)
+	    this.#card.querySelector('.share').addEventListener('click',  () => {
+		navigator.share({
+		    'title': this.props.name,
+		    'text': this.props.name,
+		    'url': new URL('#' + this.uid, location),
+		});
+	    });
 
 	return this.#card;
     }
@@ -285,7 +286,8 @@ const app = new class {
 	if (this.DOM.container.classList.toggle('open', this.#state.pane_open)) {
 	    if (this.activeMarker) {
 		this.DOM.result.replaceChildren(this.activeMarker.card);
-		const pan = () => this.map.panTo(this.activeMarker.getLatLng())
+		const latlng = this.activeMarker.getLatLng(),
+		      pan = () => this.map.panTo(latlng);
 		wasClosed ? this.map.once('resize', pan) : pan();
 		this.DOM.container.classList.add('marker-view');
 	    } else {
