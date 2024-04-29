@@ -1,3 +1,15 @@
+function e(strings, ...values) {
+    let res = strings[0];
+    for (let i = 1; i < strings.length; i++) {
+	res += values[i-1].toString()
+	    .replaceAll('&', '&amp;')
+	    .replaceAll('<', '&lt;')
+	    .replaceAll('>', '&gt;');
+	res += strings[i];
+    }
+    return res;
+}
+
 class Marker extends L.Marker {
     props;
     #thumbnail;
@@ -46,10 +58,10 @@ class Marker extends L.Marker {
 	    return this.#thumbnail;
 	this.#thumbnail = document.createElement('div');
 	this.#thumbnail.className = `thumbnail cat-${this.props.category}`;
-	this.#thumbnail.innerHTML = `
-<h3>${this.props.name}</h3>
+	this.#thumbnail.innerHTML = e`<h3>${this.props.name}</h3>`;
+	this.#thumbnail.innerHTML += `
 <ul class="tags">
-  ${ [...this.tags.values()].map((t) => `<li><button>#${t}</button></li>`).join('') }
+  ${ [...this.tags.values()].map((t) => e`<li><button>#${t}</button></li>`).join('') }
 </ul>`;
 	return this.#thumbnail;
     }
@@ -59,16 +71,41 @@ class Marker extends L.Marker {
 	    return this.#card;
 	this.#card = document.createElement('div');
 	this.#card.className = `card cat-${this.props.category}`;
-	this.#card.innerHTML = `
-<h3>${this.props.name}</h3>
+
+	this.#card.innerHTML = e`
+<h3>
+  <span class="material-symbols-outlined icon cat-${this.props.category}"></span>
+  <span>${this.props.name}</span>
+</h3>`;
+	
+	if (navigator.share) {
+	    this.#card.innerHTML += '<div class="material-symbols-outlined share">&#xe80d;</div>';
+	    this.#card.lastChild.addEventListener('click', async () => {
+		await navigator.share({
+		    'title': this.props.name,
+		    'text': this.props.name,
+		    'url': new URL('#' + this.uid, location),
+		});
+	    });
+	}
+	
+	this.#card.innerHTML += `
 <ul class="tags">
-  ${ [...this.tags.values()].map((t) => `<li><button>#${t}</button></li>`).join('') }
-</ul>
-<p>${this.props.description}</p>
-<p class="recommended-by">Recommended by: ${this.props.recommenders.join()}</p>
-`;
+  ${ [...this.tags.values()].map((t) => e`<li><button>#${t}</button></li>`).join('') }
+</ul>`;
+	this.#card.innerHTML += this.props.description;
+	
+	if (this.props.recommenders)
+	    this.#card.innerHTML += e`<p class="recommended-by">Recommended by: ${this.props.recommenders.join(', ')}</p>`;
+	
+	if (this.props.links)
+	    this.#card.innerHTML += `
+<ul class="links">
+  ${ this.props.links.map((l) => e`<li><a href="l">l</a></li>`).join('') }
+</ul>`;
 	const geo = `geo:${this.latlng.lat},${this.latlng.lng}`;
-	this.#card.innerHTML += `<p><a href="${geo}">${geo}</a></p>`;
+	this.#card.innerHTML += `<p class="geo-link"><a href="${geo}">${geo}</a></p>`;
+
 	return this.#card;
     }
 }
