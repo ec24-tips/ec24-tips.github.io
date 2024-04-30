@@ -8,6 +8,7 @@
                 "category": "bar",
                 "tags": ["restaurant", "lunch", "dinner"],
                 "description": "<p>Real Spanish tapas at real Zürich prices! Large choice of drinks.</p>",
+                "links": ["https://almodobar.com/"],
                 "recommenders": ["Luca"]
             },
             "geometry": {
@@ -25,6 +26,7 @@
                 "category": "restaurant",
                 "tags": ["lunch", "vegan"],
                 "description": "<p>Bowls. What else did you expect? Not sure what's wild about them.</p>",
+                "links": ["https://www.wild-bowls.com/"],
                 "recommenders": ["Luca"]
             },
             "geometry": {

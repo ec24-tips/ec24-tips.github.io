@@ -78,34 +78,27 @@ class Marker extends L.Marker {
   <span>${this.props.name}</span>
 </h3>`;
 	
-	if (navigator.share)
-	    this.#card.innerHTML += '<button class="material-symbols-outlined share">&#xe80d;</button>';
-	
 	this.#card.innerHTML += `
 <ul class="tags">
   ${ [...this.tags.values()].map((t) => e`<li><button>#${t}</button></li>`).join('') }
 </ul>`;
-	this.#card.innerHTML += this.props.description;
+	this.#card.innerHTML += `<div class="description">${this.props.description}</div>`;
 	
 	if (this.props.recommenders)
-	    this.#card.innerHTML += e`<p class="recommended-by">Recommended by: ${this.props.recommenders.join(', ')}</p>`;
-	
+	    this.#card.innerHTML += e`<div class="recommended-by">${this.props.recommenders.join(', ')}</div>`;
+
+	this.#card.innerHTML += '<hr>';
+	    
 	if (this.props.links)
 	    this.#card.innerHTML += `
 <ul class="links">
-  ${ this.props.links.map((l) => e`<li><a href="l">l</a></li>`).join('') }
+  ${ this.props.links.map((l) => e`<li><a href="${l}"><span class="material-symbols-outlined">&#xe157;</span>${l}</a></li>`).join('') }
 </ul>`;
 	const geo = `geo:${this._latlng.lat},${this._latlng.lng}`;
-	this.#card.innerHTML += `<p class="geo-link"><a href="${geo}">${geo}</a></p>`;
-
-	if (navigator.share)
-	    this.#card.querySelector('.share').addEventListener('click',  () => {
-		navigator.share({
-		    'title': this.props.name,
-		    'text': this.props.name,
-		    'url': new URL('#' + this.uid, location),
-		});
-	    });
+	this.#card.innerHTML += `
+<div class="geo-link">
+  <a href="${geo}"><span class="material-symbols-outlined">&#xe0c8;</span>${geo}</a>
+</div>`;
 
 	return this.#card;
     }
@@ -192,13 +185,16 @@ const app = new class {
     populateDOM() {
 	this.DOM.container.innerHTML = `<div id="map"></div>
 <div id="pane">
-  <div id="list">
-    <input id="search" list="search-results" type="search" />
-    <datalist id="search-results"></datalist>
-    <div id="active-tags"></div>
-    <div id="markers"></div>
+  <div id="pane-content">
+    <div id="share-button" class="material-symbols-outlined">&#xe80d;</div>
+    <div id="list">
+      <input id="search" list="search-results" type="search" />
+      <datalist id="search-results"></datalist>
+      <div id="active-tags"></div>
+      <div id="markers"></div>
+    </div>
+    <div id="result"></div>
   </div>
-  <div id="result"></div>
 </div>`;
 
 	this.DOM.list = this.DOM.container.querySelector('#list');
@@ -207,6 +203,16 @@ const app = new class {
 	this.DOM.search_results = this.DOM.list.querySelector("#search-results");
 	this.DOM.active_tags = this.DOM.list.querySelector('#active-tags');
 	this.DOM.markers = this.DOM.list.querySelector('#markers');
+
+	if (navigator.share) {
+	    const share = this.DOM.container.querySelector('#share-button');
+	    share.classList.add('supported');
+	    share.addEventListener('click',  () => navigator.share({
+		'title': this.props.name,
+		'text': 'Hi! check out this place:',
+		'url': new URL('#' + this.uid, location),
+	    }));
+	}
     }
 
     createMap() {

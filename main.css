@@ -1,7 +1,20 @@
-body {
-    padding: 0;
+/* Resets */
+
+* {
     margin: 0;
+    padding: 0;
 }
+a {
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+ul li {
+    list-style-type: none;
+}
+
+/* Page layout */
 
 html, body, #main {
     height: 100dvh;
@@ -17,23 +30,17 @@ html, body, #main {
     height: 100dvh;
 }
 
-#pane {
-    height: 0dvh;
-    border-top: solid thin gray;
-    border-radius: 4px;
-    background-color: white;
-    padding: 0 4px;
-    overflow-y: scroll;
-}
+/* Category icons */
 
-#main.open #map, #main.open #pane {
-    height: 50dvh;
-}
+.icon::before { content: "\eb8b"; }
+.icon.cat-restaurant::before { content: "\e56c"; }
+.icon.cat-bar::before { content: "\e540"; }
+.icon.cat-hike::before { content: "\e50a"; }
+.icon.cat-sightseeing::before { content: "\e84f"; }
+.icon.cat-viewpoint::before { content: "\e3f7"; }
+.icon.cat-conference::before { content: "\e80c"; }
 
-#main:not(.marker-view) #result,
-#main.marker-view #list {
-    display: none;
-}
+/* Map markers */
 
 .leaflet-marker-icon {
     font-variation-settings: 'FILL' 0, 'wght' 200;
@@ -54,10 +61,98 @@ html, body, #main {
     display: none;
 }
 
-.icon::before { content: "\eb8b"; }
-.icon.cat-restaurant::before { content: "\e56c"; }
-.icon.cat-bar::before { content: "\e540"; }
-.icon.cat-hike::before { content: "\e50a"; }
-.icon.cat-sightseeing::before { content: "\e84f"; }
-.icon.cat-viewpoint::before { content: "\e3f7"; }
-.icon.cat-conference::before { content: "\e80c"; }
+/* The info pane */
+
+#pane {
+    height: 0dvh;
+    border-top: solid thin gray;
+    border-radius: 4px;
+    background-color: white;
+    overflow-y: scroll;
+}
+#pane-content {
+    max-width: 600px;
+    padding: 4px;
+    margin: auto;
+    position: relative;
+}
+
+#share-button {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    display: none;
+}
+#share-button.supported {
+    display: block;
+}
+
+#main.open #map, #main.open #pane {
+    height: 50dvh;
+}
+
+#main:not(.marker-view) #result,
+#main.marker-view #list {
+    display: none;
+}
+
+/* Location card */
+
+.card .icon {
+    vertical-align: text-top;
+    padding-right: 12px;
+}
+
+.card .tags {
+    margin-left: 36px;
+}
+.card .tags li {
+    display: inline-block;
+}
+.card .tags button {
+    background-color: transparent;
+    border: none;
+    margin: 0 4px;
+    /*cursor: pointer;*/
+    color: #555;
+}
+
+.description, .recommended-by, .links, .geo-link {
+    margin-bottom: 1ex;
+    margin-top: 1ex;
+}
+
+.description {
+    text-align: justify;
+    padding: 0 6px;
+}
+
+.recommended-by {
+    font-size: 80%;
+    text-align: right;
+}
+.recommended-by::before {
+    content: "recommended by: ";
+    color: #555;
+}
+
+.card hr {
+    color: #aaa;
+    width: 60%;
+    margin: auto;
+    margin-top: 2ex;
+}
+
+.links, .geo-link {
+    font-size: 90%;
+}
+.links li, .geo-link {
+    margin-left: 12px;
+}
+
+.links .material-symbols-outlined,
+.geo-link .material-symbols-outlined {
+    font-size: 100%;
+    vertical-align: middle;
+    padding-right: 5px;
+}
