@@ -208,9 +208,9 @@ const app = new class {
 	    const share = this.DOM.container.querySelector('#share-button');
 	    share.classList.add('supported');
 	    share.addEventListener('click',  () => navigator.share({
-		'title': this.props.name,
+		'title': this.activeMarker.props.name,
 		'text': 'Hi! check out this place:',
-		'url': new URL('#' + this.uid, location),
+		'url': new URL('#' + this.activeMarker.uid, location),
 	    }));
 	}
     }
