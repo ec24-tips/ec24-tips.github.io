@@ -1,0 +1,768 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tibits",
+        "category": "restaurant",
+        "tags": ["vegetarian","vegan","breakfast","lunch","dinner"],
+        "description": "Swiss chain serving a 100% vegetarian buffet. Same concept as the famous Hiltl, with related origins. Pay by the weight, or order at the table in the <em>Bistro</em>.",
+        "links": ["https://www.tibits.ch/"],
+        "recommenders": ["Luca"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.547956363084069,
+          47.36496187460597
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kailash Parabat",
+        "category": "restaurant",
+        "tags": ["vegetarian","vegan","lunch","dinner","indian"],
+        "description": "International chain originated in Karachi, then Bombay, serving 100% vegeterian <em>chats</em> (Indian street food) from North and South India.",
+        "links": ["https://www.kailashparbat.ch/"],
+        "recommenders": ["Luca"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.537157107883928,
+          47.36794560172774
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Moser's",
+        "category": "bakery",
+        "tags": ["breakfast","lunch"],
+        "description": "Small local bakery, orginally from Baden, with salad and sandwiches to take away.",
+        "links": ["https://www.backparadies.ch/"],
+        "recommenders": ["Luca"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.534265936411828,
+          47.36730274596735
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ona Poké",
+        "category": "restaurant",
+        "tags": ["lunch","vegetarian","vegan"],
+        "description": "Swiss chain serving poke bowls. Vegetarian and vegan options.",
+        "links": ["https://onapoke.com/"],
+        "recommenders": ["Luca"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.535866394786979,
+          47.36778331687714
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nocciolina",
+        "category": "bar",
+        "tags": ["breakfast","aperitivo"],
+        "description": "For Italians with a crave for a real espresso. Drink it first, ask the price later&hellip;",
+        "links": [""],
+        "recommenders": ["Luca"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.536366258012379,
+          47.36825814757023
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "La Stanza",
+        "category": "bar",
+        "tags": ["aperitivo"],
+        "description": "Popular bar for Spritz and <em>aperitivo</em>.",
+        "links": ["https://lastanza.ch/"],
+        "recommenders": ["Luca"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.536920371412549,
+          47.368506458213034
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Jung",
+        "category": "bakery",
+        "tags": ["breakfast","lunch"],
+        "description": "Local bakery with salad and sandwiches to take away.",
+        "links": ["https://jung.ag/"],
+        "recommenders": ["Luca"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.537002059479306,
+          47.368545448837324
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Le Raymond",
+        "category": "bar",
+        "tags": ["cocktails"],
+        "description": "Hip bar with extensive cocktail menu. Outside space overlooking the canal (although not very quiet because of the street).",
+        "links": [""],
+        "recommenders": ["Luca"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.537541670793729,
+          47.36883215132971
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sprüngli Café",
+        "category": "café",
+        "tags": ["breakfast","lunch","brunch","tea time"],
+        "description": "<p>THE traditional tea room in Zürich, est. 1859.</p><p>One branch of the Sprüngli family acquired the Lindt chocolate factory in Bern to become <em>Lindt &amp; Sprüngli</em>, but the <em>Confisierie Sprüngli</em> operates independently from the better known Lindt and produces its own chocolate and pastries.</p><p>The house specialty is the <em>Luxemburgerli</em> a version of the <em>macaron</em> brought to Sprüngli's café by a pastry chef from Luxembourg. You can also try other traditional Zürich sweets such as the Lekerli and the Hüppen.</p><p>Reservation required for the Saturday/Sunday brunch.</p>",
+        "links": ["https://www.spruengli.ch/","https://en.wikipedia.org/wiki/Confiserie_Spr%C3%BCngli,"],
+        "recommenders": ["Luca"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.53916017214351,
+          47.369391991319134
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "John Baker",
+        "category": "bakery",
+        "tags": ["breakfast","lunch"],
+        "description": "Local bakery with salad and sandwiches to take away.",
+        "links": ["https://johnbaker.ch/"],
+        "recommenders": ["Luca"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.539581813027127,
+          47.36831430975374
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Luigia",
+        "category": "restaurant",
+        "tags": ["lunch","dinner","aperitivo","italian","pizza"],
+        "description": "<p>Small swiss chain of Italian restaurants, originated in Geneva. Wood oven pizza and traditional Italian cuisine. Every month a different Italian region is chosen for the monthly specials. All personnel speaks Italian.</p><p>Not the most Neapolitan of the pizzerias in Zürich, but still Italian-validated.</p>",
+        "links": ["https://www.luigia.ch/"],
+        "recommenders": ["Luca"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.535561436848297,
+          47.37038862124538
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Moudi",
+        "category": "restaurant",
+        "tags": ["lunch","dinner","mediterranean","lebanese","bar"],
+        "description": "Local franchise of Lebanese restaurants. Mezzes and all the classics.",
+        "links": ["http://www.moudi-bar.ch/"],
+        "recommenders": ["Luca"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.53437824838204,
+          47.369785606505644
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Korner",
+        "category": "restaurant",
+        "tags": ["lunch","dinner","burger","bar","pub","burger"],
+        "description": "Good burgers with locally sourced ingredients, if a bit pricey. Good selection of beers.",
+        "links": ["https://www.gourmetburger.ch/"],
+        "recommenders": ["Luca"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.534037092044258,
+          47.36866319019123
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Haus Hiltl",
+        "category": "restaurant",
+        "tags": ["breakfast","lunch","dinner","vegetarian","vegan"],
+        "description": "<p>The <em>oldest continuosly operating vegetarian restaurant in the world</em>, est. 1898.</p><p>Choose between the buffet and the <em>à la carte</em> menu.</p>",
+        "links": ["https://hiltl.ch/","https://en.wikipedia.org/wiki/Hiltl_Restaurant"],
+        "recommenders": ["Luca"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.536735134936066,
+          47.37325359699457
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Café Zähringer",
+        "category": "restaurant",
+        "tags": ["bar","lunch","dinner","vegetarian","vegan"],
+        "description": "<p>Cooperative restaurant and bar in the old town center.</p><p>Excellent location in the pedestrian area. Socially conscious, affordable prices, family friendly, some board-games available.</p>",
+        "links": ["https://zaehringer.ch/"],
+        "recommenders": ["Luca"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.544822375509199,
+          47.37359821826752
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "NA081",
+        "category": "restaurant",
+        "tags": ["lunch","dinner","pizza","italian"],
+        "description": "NA is the license plate code for Naples. 081 is the call prefix. You get the idea. Luca-approved.",
+        "links": ["https://na081.ch/"],
+        "recommenders": ["Luca"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.53351648768188,
+          47.38188744920552
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Uncle 7",
+        "category": "restaurant",
+        "tags": ["lunch","dinner","chinese"],
+        "description": "<em>Dim sum</em> restaurant, large choice of steamed dumplings and other Chinese delicacies.",
+        "links": [""],
+        "recommenders": ["Luca"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.533842731827377,
+          47.38188182745526
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sternen grill",
+        "category": "restaurant",
+        "tags": ["lunch","dinner","grill"],
+        "description": "<p>The traditional Swiss sausage.</p><p>The <em>haus</em> specialty is the <em>OLMA Bratwurst</em>, the labelled veal sausage from St. Gallen, always served with mustard (Senf) and a round bread (Bürli), not inside the bread. But you can also try the other grilled meat specialties such as pork sausages, skewers, etc.</p><p>Take away or eat in the seat-down restaurant at the first floor.</p>",
+        "links": ["https://www.sternengrill.ch/"],
+        "recommenders": ["Luca"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.545581588913024,
+          47.36727536386033
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "NA081",
+        "category": "restaurant",
+        "tags": ["lunch","dinner","pizza","italian"],
+        "description": "NA is the license plate code for Naples. 081 is the call prefix. You get the idea. Luca-approved.",
+        "links": ["https://na081.ch/"],
+        "recommenders": ["Luca"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.552478046586089,
+          47.35976633628542
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Napulé",
+        "category": "restaurant",
+        "tags": ["lunch","dinner","pizza","italian"],
+        "description": "Take-away only pizzeria, created by Napoli-born Raffaele Tromiro. The slightly smaller <em>pizza a portafoglio</em> is folded in four and eaten on the go. Luca approved.",
+        "links": ["https://www.napule.ch"],
+        "recommenders": ["Luca"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.546608917365631,
+          47.367682302091026
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ma'adan Bakery",
+        "category": "bakery",
+        "tags": ["breakfast","lunch","kosher"],
+        "description": "Jewish bakery with traditional Jewish pastries and take-away deli.",
+        "links": ["https://www.maadan.ch/"],
+        "recommenders": ["Luca"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.52555349972448,
+          47.369433200969695
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Con Gusto",
+        "category": "restaurant",
+        "tags": ["lunch","dinner","pizza","italian"],
+        "description": "One of the newest Neapolitan pizzerias in Zürich. Luca approved.",
+        "links": ["https://con-gusto.ch/"],
+        "recommenders": ["Luca"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.518263672857898,
+          47.37025476913894
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Wohnzimmerbar",
+        "category": "bar",
+        "tags": ["aperitivo","dj set"],
+        "description": "<em>Wohnzimmer</em> means \"living room\" in German. Small cosy bar with outdoor sitting space. Gets crowded on weekends. Pay by cash or Twint only.",
+        "links": ["https://www.wohnzimmerbar.ch/"],
+        "recommenders": ["Luca", "Bertram"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.520070805238362,
+          47.374130567734966
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "LILY's Factory",
+        "category": "restaurant",
+        "tags": ["lunch","dinner","asian","tea time","vegetarian","vegan"],
+        "description": "International Asian cuisine, since 1999. No reservations.",
+        "links": ["https://lilys.ch/"],
+        "recommenders": ["Luca"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.516965497971626,
+          47.375398377763844
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Miki Ramen",
+        "category": "restaurant",
+        "tags": ["lunch","dinner","japanese"],
+        "description": "Small ramen joint. No reservations",
+        "links": ["https://miki.ch/"],
+        "recommenders": ["Luca"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.516616787232579,
+          47.375250695475785
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "links": ["https://gelateriadiberna.ch/"],
+        "name": "Gelateria di Berna",
+        "category": "café",
+        "tags": ["ice cream"],
+        "description": "The best established <em>gelateria</em> gelateria in Zürich. Established in Bern in 2010 by three Swiss friends who learned the art in Verona. The ice cream tastes authentically Italian and, surprisingly, the prices too!",
+        "recommenders": ["Luca"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.517090562937483,
+          47.37493191129397
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Rosso Arancio",
+        "category": "café",
+        "tags": ["ice cream"],
+        "description": "Less well known than Gelateria di Berna, but equally good. Created by Venice-born Jimmy Begaj, who for 20 years has been making <em>gelato</em> in Zürich and moved to his new location on Staufacherplatz in 2018.",
+        "links": ["https://rosso-arancio.ch/"],
+        "recommenders": ["Luca"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.528553889913837,
+          47.373808242248884
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fribourger Stübli",
+        "category": "restaurant",
+        "tags": ["lunch","dinner","fondue","vegetarian"],
+        "description": "Swiss people only eat cheese fondue from October to March, but if you can't leave Switzerland without a fondue, the <em>Stübli</em> is the place for you. The only right place for fondue in Zürich, some would say.",
+        "links": ["https://www.fribourger-fondue-stuebli.ch/"],
+        "recommenders": ["Luca"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.52817255484365,
+          47.37500482340849
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "La Taqueria",
+        "category": "restaurant",
+        "tags": ["lunch","dinner"],
+        "description": "The Mexican scene in Zürich is nothing to rave about, but if you're after a quick and relatively cheap bite on your way to Wohnzimmerbar, you can't go wrong with the Taqueria.",
+        "links": ["https://www.lataqueria.ch/"],
+        "recommenders": ["Luca"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.52288830153131,
+          47.37445379676839
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hitl am Strand",
+        "category": "restaurant",
+        "tags": ["lunch","dinner","vegetarian","vegan"],
+        "description": "Beach eatery by the vegetarian restaurant Hiltl. The entry to the Mythenquai beach costs 8 Franks.",
+        "links": ["https://hiltl.ch/","https://www.sportamt.ch/strandbad-mythenquai"],
+        "recommenders": ["Luca"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.534711308370845,
+          47.35361069589402
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Rote Fabrik",
+        "category": "restaurant",
+        "tags": ["lunch","dinner","bar","theater","concerts","club"],
+        "description": "<p>Arts and food complex in an old factory. Outdoor sitting space right on the lake.</p><p>It's a 40 minutes (3km) stroll from the conference center, through the Mythenquai park. Alternatively you can take bus 161 or 165 from Bürkliplatz to Rote Fabrik.</p>",
+        "links": ["https://rotefabrik.ch/#/"],
+        "recommenders": ["Luca"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.536917489323343,
+          47.34361431389448
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mönchof am See",
+        "category": "restaurant",
+        "tags": ["bar","lunch","dinner","grill"],
+        "description": "<p>Lakeside eatery for grilled meats and beer. A few other options are also available.</p><p>Excellent location right on the lake, but almost all in the open, so avoid rainy days.</p><p>Get there with the 161 or 165 bus from Bürkliplatz, stop Stadtgrenze.</p>",
+        "links": ["https://www.moenchhof-am-see.ch/"],
+        "recommenders": ["Luca"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.544715222736073,
+          47.33257182101124
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fischer's Fritz",
+        "category": "restaurant",
+        "tags": ["lunch","dinner","fish","grill"],
+        "description": "<p>Fritz is a camping and also a restaurant, serving local fish from the Zürich lake but also other dishes. One of the best locations in Zürich when the weather is nice, the tables seat on a green lawn by the lake.</p><p>Get there with the 161 or 165 bus from Bürkliplatz, stop Stadtgrenze.</p>",
+        "links": ["https://www.fischers-fritz.ch/"],
+        "recommenders": ["Luca"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.54226459318403,
+          47.335904407123905
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hiltl Sihlpost",
+        "category": "restaurant",
+        "tags": ["breakfast","lunch","dinner","vegetarian","vegan"],
+        "description": "<p>Buffet-only location of the famous vegetarian restaurant.</p>",
+        "links": ["https://hiltl.ch/"],
+        "recommenders": ["Luca"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.535678650586135,
+          47.37765448469199
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Caredda",
+        "category": "café",
+        "tags": ["breakfast","tea time","italian"],
+        "description": "Authentic Italian pastry shop. The place for an espresso and a <em>cannolo</em> or <em>babà</em>.",
+        "links": ["https://konditorei-caredda.ch/"],
+        "recommenders": ["Luca"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.52923041202942,
+          47.38379032847183
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Frau Gerolds Garten",
+        "category": "restaurant",
+        "tags": ["bar","market","ice cream","lunch","dinner","vegetarian","vegan","grill"],
+        "description": "Open air garden with street food and bar in the old manufacturing area by the train station. Gelati di Berna also seves ice creams here.",
+        "links": ["https://www.fraugerold.ch/"],
+        "recommenders": ["Luca"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.519076961544044,
+          47.385170598760396
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Rimini bar",
+        "category": "bar",
+        "tags": ["aperitivo","cocktails","club"],
+        "description": "Poolside bar, but the pool is in the canal that connects the Sihl river to the lake.",
+        "links": ["http://www.rimini.ch/"],
+        "recommenders": ["Luca"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.53292609863982,
+          47.37153676042877
+        ],
+        "type": "Point"
+      },
+      "id": 36
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Linde Oberstrass",
+        "category": "restaurant",
+        "tags": ["lunch","dinner","swiss"],
+        "description": "Traditional restaurant by ETH/UZH. Affordable lunch menu.",
+        "links": ["https://linde-oberstrass.ch/"],
+        "recommenders": ["Luca"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.548135927793197,
+          47.38348591673281
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Almodo Bar",
+        "category": "bar",
+        "tags": ["restaurant","lunch","dinner","tapas"],
+        "description": "Authentic Spanish tapas at authentic Zürich prices! Large choice of drinks.",
+        "links": ["https://almodobar.com/"],
+        "recommenders": [
+          ["Luca"]
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          8.533419631943275,
+          47.36697019092114
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Wild Bowls",
+        "category": "restaurant",
+        "tags": ["lunch","brunch","vegetarian","vegan"],
+        "description": "Bowls. All plant based. Saturday brunch.",
+        "links": [
+          "https://www.wild-bowls.com/"
+        ],
+        "recommenders": [
+          ["Luca"]
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          8.534340133807717,
+          47.36780078853624
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Café 1842",
+        "category": "café",
+        "tags": ["breakfast","lunch","brunch","tea time"],
+        "description": "Tea room in the heart of the old town. Excellent pastries.",
+        "links": ["https://www.cafe1842.ch/"],
+        "recommenders": ["Luca"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.544233196318402,
+          47.371499941833406
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Coop restaurant",
+        "category": "restaurant",
+        "tags": ["lunch","vegetarian","vegan"],
+        "description": "Large coop supermarkets are always a good option for a cheap bite. Take away or eat inside.",
+        "links": ["https://www.coop.ch/"],
+        "recommenders": ["Luca"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.53804492099971,
+          47.37291621119189
+        ],
+        "type": "Point"
+      }
+    }
+  ]
+}

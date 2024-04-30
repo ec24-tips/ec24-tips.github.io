@@ -35,6 +35,8 @@ html, body, #main {
 .icon::before { content: "\eb8b"; }
 .icon.cat-restaurant::before { content: "\e56c"; }
 .icon.cat-bar::before { content: "\e540"; }
+.icon.cat-café::before { content: "\e541"; }
+.icon.cat-bakery::before { content: "\ea53"; }
 .icon.cat-hike::before { content: "\e50a"; }
 .icon.cat-sightseeing::before { content: "\e84f"; }
 .icon.cat-viewpoint::before { content: "\e3f7"; }
