@@ -21,6 +21,7 @@ class Marker extends L.Marker {
 	    icon:  L.divIcon({
 		className: `material-symbols-outlined icon cat-${props.category}`,
 		iconSize: '28px',
+		iconAnchor: [14, 14],
 	    }),
 	    alt: props.name,
 	});

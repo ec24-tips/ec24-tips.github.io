@@ -61,6 +61,7 @@ html, body, #main {
     color: #00f;
     background-color: #fffe;
     border: solid thin #00f;
+    z-index: 1000!important;
 }
 .leaflet-marker-icon.hidden {
     display: none;
