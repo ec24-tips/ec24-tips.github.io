@@ -152,7 +152,7 @@
         "category": "café",
         "tags": ["breakfast","lunch","brunch","tea time"],
         "description": "<p>THE traditional tea room in Zürich, est. 1859.</p><p>One branch of the Sprüngli family acquired the Lindt chocolate factory in Bern to become <em>Lindt &amp; Sprüngli</em>, but the <em>Confisierie Sprüngli</em> operates independently from the better known Lindt and produces its own chocolate and pastries.</p><p>The house specialty is the <em>Luxemburgerli</em> a version of the <em>macaron</em> brought to Sprüngli's café by a pastry chef from Luxembourg. You can also try other traditional Zürich sweets such as the Lekerli and the Hüppen.</p><p>Reservation required for the Saturday/Sunday brunch.</p>",
-        "links": ["https://www.spruengli.ch/","https://en.wikipedia.org/wiki/Confiserie_Spr%C3%BCngli,"],
+        "links": ["https://www.spruengli.ch/","https://en.wikipedia.org/wiki/Confiserie_Sprüngli"],
         "recommenders": ["Luca"]
       },
       "geometry": {

@@ -41,6 +41,9 @@ html, body, #main {
 .icon.cat-sightseeing::before { content: "\e84f"; }
 .icon.cat-viewpoint::before { content: "\e3f7"; }
 .icon.cat-conference::before { content: "\e80c"; }
+.icon.cat-shopping::before { content: "\f1cc"; }
+.icon.cat-beach::before { content: "\eb3e"; }
+
 
 /* Map markers */
 

@@ -31,9 +31,13 @@ The category of a feature determines the icon that is shown on the map. The list
 |-|-|
 |`restaurant`|A place that primarily functions as a restaurant
 |`bar`|A place that primarily functions as a var
+|`café`|A coffee/tea/pastry parlor. It's `café`, not `cafe`
+|`bakery`|A bakery or sandwich shop
+|`shopping`|A store selling souvenirs, local goods, etc.
 |`sightseeing`|A monument, park, etc.
 |`hike`|A hike or a start/middle/end point for a hike
 |`viewpoint`|A scenic viewpoint
+|`beach`|A lakeside beach
 |`conference`|buildings where the conference takes place
 
 Any other category receives a default "question mark" icon. 
