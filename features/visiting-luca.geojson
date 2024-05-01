@@ -1,0 +1,23 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bürklimäärt",
+        "category": "shopping",
+        "tags": ["market","breakfast"],
+        "description": "On Tuesday and Friday mornings the Zürich's most bourgeois farmer's market takes its quarters on Bürkliplatz until 11am. You can mainly buy groceries and flowers here, but you may also grab some local specialties from the region or a quick bite for breakfast. And, of course, cheese!",
+        "links": ["https://www.zuerich.com/en/visit/place/weekly-market-at-burkliplatz"],
+	"recommenders": ["Luca"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.54070042600668,
+          47.3671824809731
+        ],
+        "type": "Point"
+      }
+    }
+  ]
+}

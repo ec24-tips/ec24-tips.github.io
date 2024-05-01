@@ -1,0 +1,53 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tonhalle",
+	"category": "conference",
+	"tags": [],
+	"description": "The main venue of Eurocrypt 2024."
+      },
+      "geometry": {
+        "coordinates": [
+          8.538067181464385,
+          47.36604217982793
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Conference dinner",
+	"category": "conference",
+	"tags": ["dinner"],
+	"description": "Pier for embarking the ships for the conference dinner."
+      },
+      "geometry": {
+        "coordinates": [
+          8.540734847325552,
+          47.36606183304394
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "ETH",
+ 	"category": "conference",
+	"tags": [],
+	"description": "The <em>Eidgenössiche Technische Hochschule Zürich</em>, the venue for the affiliated events."
+     },
+      "geometry": {
+        "coordinates": [
+          8.548045005009897,
+          47.376457598497495
+        ],
+        "type": "Point"
+      }
+    }
+  ]
+}
