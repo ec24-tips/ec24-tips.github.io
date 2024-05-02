@@ -1,0 +1,72 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Uetliberg",
+        "category": "viewpoint",
+        "tags": [
+          "hike"
+        ],
+        "description": "Zurich's \"Hausberg\". Enjoy an excellent view over the city, lake, and the alpine range. Reachable by train (S10, plus some 15' easy uphill walking), or as a ~1:30h steep uphill hike from the city (tram stop: Triemli).",
+        "links": [
+          "https://www.zuerich.com/en/visit/attractions/uetliberg"
+        ],
+        "recommenders": [
+          "Felix"
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          8.49198652759054,
+          47.34946473669089
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Zürichhorn",
+        "category": "viewpoint",
+        "tags": [
+          "beach",
+          "lake"
+        ],
+        "description": "Stroll along the eastern lake shore to Zürichhorn, for a panorama of the city, the lake, and the mountains. Small beach and large green area to relax. You can take a boat back into the city from Zürichhorn pier (included in the 110 city zone).",
+        "recommenders": [
+          "Felix"
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          8.551612821117914,
+          47.35273421374299
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Zürichberg",
+        "category": "viewpoint",
+        "tags": [
+          "hike"
+        ],
+        "description": "Enjoy the view above the city and the lake, with the alps in the back. For a short stroll, you can ride the funicular up to Rigiblick (from \"Seilbahn Rigiblick\") and walk over to the tram stop \"Zoo\" (all included in the 110 city zone).",
+        "recommenders": [
+          "Felix"
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          8.564543603916235,
+          47.38386373462308
+        ],
+        "type": "Point"
+      }
+    }
+  ]
+}
