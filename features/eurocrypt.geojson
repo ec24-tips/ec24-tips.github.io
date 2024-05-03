@@ -7,7 +7,10 @@
         "name": "Tonhalle",
 	"category": "conference",
 	"tags": [],
-	"description": "The main venue of Eurocrypt 2024."
+	"description": "The main venue of Eurocrypt 2024.",
+        "links": [
+          "https://eurocrypt.iacr.org/2024/travel.php"
+        ]
       },
       "geometry": {
         "coordinates": [
@@ -39,7 +42,10 @@
         "name": "ETH",
  	"category": "conference",
 	"tags": [],
-	"description": "The <em>Eidgenössiche Technische Hochschule Zürich</em>, the venue for the affiliated events."
+	"description": "The <em>Eidgenössiche Technische Hochschule Zürich</em>, the venue for the affiliated events.",
+        "links": [
+          "https://eurocrypt.iacr.org/2024/affiliated.php"
+        ]
      },
       "geometry": {
         "coordinates": [

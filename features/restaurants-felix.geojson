@@ -1,0 +1,185 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Simon Says Taste Taiwan",
+        "category": "restaurant",
+        "tags": [
+          "lunch",
+          "dinner",
+          "taiwanese"
+        ],
+        "description": "If you're craving some Taiwanese Beef Noodle Soup or Chicken Popcorn, Simon Says is the place to go.",
+        "links": [
+          "https://simonsaystaiwan.ch/"
+        ],
+        "recommenders": [
+          "Felix"
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          8.527743302594388,
+          47.37873997375601
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Maneez",
+        "category": "restaurant",
+        "tags": [
+          "lunch",
+          "dinner",
+          "vegetarian",
+          "sri lankan"
+        ],
+        "description": "Great deal to get your stomach filled (with freshly made Kottu Rotti, the famous street food from Sri Lanka). Best yumminess-per-Franc ratio available in Zurich; suitable for vegans. Don't expect a fancy place; consider the take away option and enjoy your meal by the river (Oberer Letten) or in a park (Josefwiese or Platzspitz).",
+        "recommenders": [
+          "Bertram"
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          8.528433206362138,
+          47.3841927462519
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "ETH Mensa (Polyterrasse)",
+        "category": "restaurant",
+        "tags": [
+          "lunch",
+          "dinner",
+          "vegetarian"
+        ],
+        "description": "The ETH Zurich canteens offer some cheap meals for lunch and (early) dinner, especially if you can show a student id card. Polyterrasse moreover has outdoor seating with a view over the city.",
+        "links": [
+          "https://ethz.ch/en/campus/getting-to-know/cafes-restaurants-shops/gastronomy/restaurants-and-cafeterias/zentrum/mensa-polyterrasse.html"
+        ],
+        "recommenders": [
+          "Felix"
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          8.546184829753287,
+          47.36735261736251
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Coop restaurant",
+        "category": "restaurant",
+        "tags": [
+          "lunch",
+          "vegetarian",
+          "vegan"
+        ],
+        "description": "Large Coop supermarkets are always a good option for a cheap bite. Take away or eat inside.",
+        "links": [
+          "https://www.coop-restaurant.ch/en.html"
+        ],
+        "recommenders": [
+          "Felix"
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          8.546184829753287,
+          47.36735261736251
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Migros restaurant",
+        "category": "restaurant",
+        "tags": [
+          "lunch",
+          "vegetarian",
+          "vegan"
+        ],
+        "description": "Large Migros supermarkets are always a good option for a cheap bite. Take away or eat inside.",
+        "links": [
+          "https://gastro.migros.ch/de/genossenschaften/zuerich/migros-restaurants.html"
+        ],
+        "recommenders": [
+          "Felix"
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          8.536087910481143,
+          47.37549492353935
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Migros restaurant",
+        "category": "restaurant",
+        "tags": [
+          "lunch",
+          "vegetarian",
+          "vegan"
+        ],
+        "description": "Large Migros supermarkets are always a good option for a cheap bite. Take away or eat inside.",
+        "links": [
+          "https://gastro.migros.ch/de/genossenschaften/zuerich/migros-restaurants.html"
+        ],
+        "recommenders": [
+          "Felix"
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          8.531202139743868,
+          47.38552465972842
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Migros restaurant",
+        "category": "restaurant",
+        "tags": [
+          "lunch",
+          "vegetarian",
+          "vegan"
+        ],
+        "description": "Large Migros supermarkets are always a good option for a cheap bite. Take away or eat inside.",
+        "links": [
+          "https://gastro.migros.ch/de/genossenschaften/zuerich/migros-restaurants.html"
+        ],
+        "recommenders": [
+          "Felix"
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          8.547877408708075,
+          47.36543341222932
+        ],
+        "type": "Point"
+      }
+    }
+  ]
+}
