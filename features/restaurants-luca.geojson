@@ -840,12 +840,14 @@
           "club",
 	  "lakeside"
         ],
-        "description": "<p>Arts and food complex in an old factory. Outdoor sitting space right on the lake.</p><p>It's a 40 minutes (3km) stroll from the conference center, through the Mythenquai park. Alternatively you can take bus 161 or 165 from Bürkliplatz to Rote Fabrik.</p>",
+        "description": "<p>Arts and food complex (restaurant \"Ziegel oh Lac\") in an old factory. Outdoor sitting space right on the lake.</p><p>It's a 40 minutes (3km) stroll from the conference center, through the Mythenquai park. Alternatively you can take bus 161 or 165 from Bürkliplatz to Rote Fabrik.</p>",
         "links": [
-          "https://rotefabrik.ch/#/"
+          "https://rotefabrik.ch/#/",
+          "http://www.ziegelohlac.ch/"
         ],
         "recommenders": [
-          "Luca"
+          "Luca",
+          "Bertram"
         ]
       },
       "geometry": {

@@ -180,6 +180,81 @@
         ],
         "type": "Point"
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Arcade Pizzeria",
+        "category": "restaurant",
+        "tags": [
+          "lunch",
+          "dinner",
+          "pizza",
+          "italian"
+        ],
+        "description": "Best Napoletanean Pizza",
+        "links": [
+          "https://arcadepizzeria.ch/"
+        ],
+        "recommenders": [
+          "Bertram"
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          8.524327227735569,
+          47.37104488803689
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bierwerk Züri",
+        "category": "bar",
+        "tags": [
+          "beer"
+        ],
+        "description": "Microbrewery, but also all their <del>focaccias</del>focacce are outstanding; the vegan option will not disappoint.",
+        "links": [
+          "http://bierwerkzueri.ch/"
+        ],
+        "recommenders": [
+          "Bertram"
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          8.531601727218913,
+          47.37945361318663
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The International Beer Bar",
+        "category": "bar",
+        "tags": [
+          "beer"
+        ],
+        "description": "For beer lovers; finest, weekly changing, selection of international beers, with a focus on IPAs.",
+        "links": [
+          "http://www.theinternational.ch/"
+        ],
+        "recommenders": [
+          "Bertram"
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          8.52870813322184,
+          47.38288833687014
+        ],
+        "type": "Point"
+      }
     }
   ]
 }
