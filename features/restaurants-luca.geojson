@@ -1086,7 +1086,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Café 1842",
+        "name": "Café & Conditorei 1842",
         "category": "café",
         "tags": [
           "breakfast",
@@ -1094,12 +1094,13 @@
           "brunch",
           "tea time"
         ],
-        "description": "Tea room in the heart of the old town. Excellent pastries.",
+        "description": "Tea room in the heart of the old town, with various ornate rooms. Excellent pastries and hot chocolate.",
         "links": [
           "https://www.cafe1842.ch/"
         ],
         "recommenders": [
-          "Luca"
+          "Luca",
+          "Felix"
         ]
       },
       "geometry": {
