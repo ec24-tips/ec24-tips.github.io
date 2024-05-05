@@ -1058,12 +1058,14 @@
         "name": "Wild Bowls",
         "category": "restaurant",
         "tags": [
+	  "breakfast",
           "lunch",
           "brunch",
+	  "tea time",
           "vegetarian",
           "vegan"
         ],
-        "description": "Bowls. All plant based. Saturday brunch.",
+        "description": "Bowls: rice bowls, protein bowls, açai bowls&hellip; all plant based. Eat in or take away. Also a good spot to read your emails while sipping a kombucha. Saturday brunch.",
         "links": [
           "https://www.wild-bowls.com/"
         ],
