@@ -67,6 +67,155 @@
         ],
         "type": "Point"
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Flussbad Oberer Letten",
+        "category": "beach",
+        "tags": [
+          "flussbad",
+          "badi"
+        ],
+        "description": "<p>Cool off in the river Limmat, floating downstream. You can enter as far up as \"Drahtschmidlisteg\". Restaurant and bar for snacks and drinks. Facilities available in the bathing facility (free entry).</p><p><b>Caution:</b> Be aware of the river's current, good swimmers only, check in advance where to exit (via ladders, observe the exit signs!); safety guards are only partially on site.</p>",
+        "links": [
+          "https://www.zuerich.com/en/visit/sport/upper-letten-river-pool"
+        ],
+        "recommenders": [
+          "Felix"
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              8.53496988462993,
+              47.38572030888329
+            ],
+            [
+              8.53472654173845,
+              47.3855384261671
+            ],
+            [
+              8.536782572416115,
+              47.38436030854615
+            ],
+            [
+              8.538534604250287,
+              47.383328414543
+            ],
+            [
+              8.539654624601951,
+              47.38258901350491
+            ],
+            [
+              8.539822627655099,
+              47.382700059743826
+            ],
+            [
+              8.53883460970198,
+              47.38340154155492
+            ],
+            [
+              8.538546604468479,
+              47.383718424099726
+            ],
+            [
+              8.538050604972597,
+              47.38405968051228
+            ],
+            [
+              8.536866583458192,
+              47.384544476897474
+            ],
+            [
+              8.53496988462993,
+              47.38572030888329
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Flussbad Werdinsel",
+        "category": "beach",
+        "tags": [
+          "flussbad",
+          "badi"
+        ],
+        "description": "<p>Cool off in the river Limmat, floating downstream. Nice lawn for sunbathing, restaurant and bar for snacks and drinks. Facilities available in the bathing facility (free entry).</p><p><b>Caution:</b> Be aware of the river's current, good swimmers only, check in advance where to exit (via ladders, observe the exit signs!); safety guards are usually on site.</p>",
+        "links": [
+          "https://www.stadt-zuerich.ch/ssd/de/index/sport/schwimmen/sommerbaeder/flussbad_au_hoengg.html",
+          "https://www.badi-info.ch/au_hoengg.html"
+        ],
+        "recommenders": [
+          "Felix"
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          8.49101991331463,
+          47.399395850432086
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Seebad Tiefenbrunnen",
+        "category": "beach",
+        "tags": [
+          "seebad",
+          "badi",
+          "child-friendly"
+        ],
+        "description": "Cool off in the Zurich lake. Lawn for sunbathing, restaurant and bar for snacks and drinks, playgrounds and non-swimmer bathing area, bathing facilities. 8CHF entrance fee (adults).",
+        "links": [
+          "https://www.stadt-zuerich.ch/ssd/de/index/sport/schwimmen/sommerbaeder/strandbad_tiefenbrunnen.html",
+          "https://www.badi-info.ch/Tiefenbrunnen.html"
+        ],
+        "recommenders": [
+          "Felix"
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          8.556075317120047,
+          47.352291557709634
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Seebad Mythenquai",
+        "category": "beach",
+        "tags": [
+          "seebad",
+          "badi",
+          "child-friendly"
+        ],
+        "description": "Cool off in the Zurich lake. Lawn for sunbathing, restaurant and bar for snacks and drinks, playgrounds and non-swimmer bathing area, bathing facilities. 8CHF entrance fee (adults).",
+        "links": [
+          "https://www.stadt-zuerich.ch/ssd/de/index/sport/schwimmen/sommerbaeder/strandbad_mythenquai.html",
+          "https://www.badi-info.ch/Mythenquai.html"
+        ],
+        "recommenders": [
+          "Felix"
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          8.535471245154497,
+          47.353560254774976
+        ],
+        "type": "Point"
+      }
     }
   ]
 }

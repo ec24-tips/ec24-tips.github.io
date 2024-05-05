@@ -322,6 +322,34 @@
         ],
         "type": "Point"
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fink's Südtiroler Knödelküche",
+        "category": "restaurant",
+        "tags": [
+          "lunch",
+          "dinner",
+          "austrian",
+          "vegetarian",
+          "vegan"
+        ],
+        "description": "Taste the world of Tirolese Knödel (bread dumplings) – speck, spinach, cheese, beetroot, herbs, mushrooms, nougat, honey, ...",
+        "links": [
+          "http://finks.eu/zurich"
+        ],
+        "recommenders": [
+          "Tabea"
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          8.533930999604394,
+          47.381795242426136
+        ],
+        "type": "Point"
+      }
     }
   ]
 }
