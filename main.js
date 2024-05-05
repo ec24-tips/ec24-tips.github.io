@@ -10,47 +10,67 @@ function e(strings, ...values) {
     return res;
 }
 
-
-class Marker extends L.Marker {
-    props;
+/* This class enriches a Leaflet layer by making it interactive */
+class Interactor {
+    #layer;
     #thumbnail;
     #card;
 
-    constructor(latlng, uid, props) {
-	super(latlng, {
-	    icon:  L.divIcon({
-		className: `material-symbols-outlined icon cat-${props.category}`,
-		iconSize: '28px',
-		iconAnchor: [14, 14],
-	    }),
-	    alt: props.name,
-	});
+    constructor(layer, uid, props) {
+	this.#layer = layer;
 	this.uid = uid;
 	this.props = props;
 	this.tags = new Set(props.tags);
 	this.tags.add(props.category);
 	this.active = this.hidden = false;
     }
+
+    center(map) {
+	if ((this.#layer instanceof L.Marker)
+	    || (this.#layer instanceof L.CircleMarker)) {
+	    map.panTo(this.#layer.getLatLng());
+	} else if (this.#layer instanceof L.Polyline) {
+	    map.panTo(this.#layer.getCenter());
+	    map.fitBounds(this.#layer.getBounds(), {
+		maxZoom: map.getZoom(),
+	    });
+	}
+    }
+
+    get #node() {
+	return (this.#layer instanceof L.Marker)
+	    ? this.#layer._icon
+	    : (this.#layer instanceof L.Polyline)
+	    ? this.#layer._path
+	    : undefined;
+    }
+
+    get geoURI() {
+	return (this.#layer instanceof L.Marker)
+	    || (this.#layer instanceof L.CircleMarker)
+	    ? `geo:${this.#layer._latlng.lat},${this.#layer._latlng.lng}`
+	    : undefined;
+    }
     
     activate() {
 	this.active = true;
-	this._icon.classList.add('active');
+	this.#node.classList.add('active');
     }
 
     deactivate() {
 	this.active = false;
-	this._icon.classList.remove('active');
+	this.#node.classList.remove('active');
     }
 
     hide() {
 	this.hidden = true;
-	this._icon.classList.add('hidden');
+	this.#node.classList.add('hidden');
 	this.#thumbnail.classList.add('hidden');
     }
 
     show() {
 	this.hidden = false;
-	this._icon.classList.remove('hidden');
+	this.#node.classList.remove('hidden');
 	this.#thumbnail.classList.remove('hidden');
     }
 
@@ -93,19 +113,39 @@ class Marker extends L.Marker {
 	if (this.props.links)
 	    this.#card.innerHTML += `
 <ul class="links">
-  ${ this.props.links.map((l) => e`<li><a href="${l}"><span class="material-symbols-outlined">&#xe157;</span>${l}</a></li>`).join('') }
+  ${ this.props.links.map((l) => e`<li><a target="_blank" href="${l}"><span class="material-symbols-outlined">&#xe157;</span>${l}</a></li>`).join('') }
 </ul>`;
-	const geo = `geo:${this._latlng.lat},${this._latlng.lng}`;
-	this.#card.innerHTML += `
+
+	let geo;
+	if (geo = this.geoURI) {
+	    this.#card.innerHTML += `
 <div class="geo-link">
   <a href="${geo}"><span class="material-symbols-outlined">&#xe0c8;</span>${geo}</a>
 </div>`;
+	}
 
 	return this.#card;
     }
 }
 
-class MarkerCollection extends Map {
+/* A small extension to Leaflet's marker with custom icon */
+class Marker extends L.Marker {
+    props;
+
+    constructor(latlng, feature) {
+	super(latlng, {
+	    icon:  L.divIcon({
+		className: `material-symbols-outlined icon cat-${feature.properties.category}`,
+		iconSize: '28px',
+		iconAnchor: [14, 14],
+	    }),
+	    alt: feature.properties.name,
+	});
+	this.feature = feature;
+    }
+}
+
+class LayerCollection extends Map {
     #tags = new Map();
     #index = new Fuse([], {
 	includeScore: true,
@@ -114,30 +154,30 @@ class MarkerCollection extends Map {
     });
     
     tag(key) {
-	let markers = this.#tags.get(key);
-	if (!markers) {
-	    markers = new Array();
-	    this.#tags.set(key, markers);
+	let layers = this.#tags.get(key);
+	if (!layers) {
+	    layers = new Array();
+	    this.#tags.set(key, layers);
 	    this.#index.add({
 		type: 'tag',
 		value: '#' + key,
 	    });
 	}
-	return markers;
+	return layers;
     }
 
     tags() {
 	return this.#tags.keys();
     }
 
-    insert(marker) {
-	this.set(marker.uid, marker);
-	for (let m of marker.tags)
-	    this.tag(m).push(marker);
+    insert(layer) {
+	this.set(layer.I.uid, layer);
+	for (let m of layer.I.tags)
+	    this.tag(m).push(layer);
 	this.#index.add({
-	    type: 'marker',
-	    marker: marker,
-	    value: marker.props.name,
+	    type: 'layer',
+	    layer: layer,
+	    value: layer.I.props.name,
 	});
     }
 
@@ -147,10 +187,10 @@ class MarkerCollection extends Map {
 }
 
 const app = new class {
-    #markers = new MarkerCollection();
+    #layers = new LayerCollection();
     #state = {
 	pane_open: false,
-	activeMarker: null,
+	activeLayer: null,
 	activeTags: [],
     };
 
@@ -159,13 +199,13 @@ const app = new class {
 	    this.#state.pane_open = state.pane_open;
 	if (state?.activeTags !== undefined)
 	    this.#state.activeTags = state.activeTags;
-	if (state?.activeMarker !== undefined)
-	    this.activeMarker = this.#markers.get(state.activeMarker) ?? null;
+	if (state?.activeLayer !== undefined)
+	    this.activeLayer = this.#layers.get(state.activeLayer) ?? null;
     }
 
     #setStateFromUID(uid) {
-	this.#setState({ activeMarker: uid });
-	this.#state.pane_open = Boolean(this.#state.activeMarker);
+	this.#setState({ activeLayer: uid });
+	this.#state.pane_open = Boolean(this.#state.activeLayer);
     }
     
     constructor(container, features) {
@@ -192,7 +232,7 @@ const app = new class {
       <input id="search" list="search-results" type="search" />
       <datalist id="search-results"></datalist>
       <div id="active-tags"></div>
-      <div id="markers"></div>
+      <div id="layers"></div>
     </div>
     <div id="result"></div>
   </div>
@@ -203,15 +243,15 @@ const app = new class {
 	this.DOM.search = this.DOM.list.querySelector('#search');
 	this.DOM.search_results = this.DOM.list.querySelector("#search-results");
 	this.DOM.active_tags = this.DOM.list.querySelector('#active-tags');
-	this.DOM.markers = this.DOM.list.querySelector('#markers');
+	this.DOM.layers = this.DOM.list.querySelector('#layers');
 
 	if (navigator.share) {
 	    const share = this.DOM.container.querySelector('#share-button');
 	    share.classList.add('supported');
 	    share.addEventListener('click',  () => navigator.share({
-		'title': this.activeMarker.props.name,
+		'title': this.activeLayer.I.props.name,
 		'text': 'Hi! check out this place:',
-		'url': new URL('#' + this.activeMarker.uid, location),
+		'url': new URL('#' + this.activeLayer.I.uid, location),
 	    }));
 	}
     }
@@ -234,7 +274,7 @@ const app = new class {
     activateSearch() {
 	this.DOM.search.addEventListener('input', (e) => {
 	    this.DOM.search_results.innerHTML = '';
-	    for (let res of this.#markers.search(this.DOM.search.value)) {
+	    for (let res of this.#layers.search(this.DOM.search.value)) {
 		this.DOM.search_results.innerHTML +=
 		    `<option value="${res.item.value}" class="${res.item.type}"></option>`;
 	    }
@@ -247,41 +287,48 @@ const app = new class {
 	const features = await res.json();
 	
 	L.geoJSON(features, {
-	    pointToLayer: (point, latlng) => this.addMarker(latlng, point.id, point.properties),
+	    pointToLayer: (point, latlng) => this.addMarker(latlng, point),
+	    onEachFeature: (feature, layer) => (feature.geometry.type != "Point"
+						&& this.awaken(layer)),
 	}).addTo(this.map);
     }
     
-    addMarker(latlng, uid, props) {
-	const m = new Marker(latlng, uid, props);
-	m.on('click', (e) => this.open(m));
-	this.#markers.insert(m);
-	this.DOM.markers.appendChild(m.thumbnail);
-	return m;
+    addMarker(latlng, point) {
+	return this.awaken(new Marker(latlng, point));
     }
 
-    get activeMarker() {
-	return this.#state.activeMarker && this.#markers.get(this.#state.activeMarker);
+    awaken(layer) {
+	layer.I = new Interactor(layer, layer.feature.id, layer.feature.properties);
+	layer.options.bubblingMouseEvents = false;
+	layer.on('click', (e) => this.open(layer));
+	this.#layers.insert(layer);
+	this.DOM.layers.appendChild(layer.I.thumbnail);
+	return layer;
     }
 
-    set activeMarker(marker) {
-	this.activeMarker?.deactivate();
-	if (marker) {
-	    this.#state.activeMarker = marker.uid;
-	    marker.activate();
+    get activeLayer() {
+	return this.#state.activeLayer && this.#layers.get(this.#state.activeLayer);
+    }
+
+    set activeLayer(layer) {
+	this.activeLayer?.I.deactivate();
+	if (layer) {
+	    this.#state.activeLayer = layer.I.uid;
+	    layer.I.activate();
 	} else {
-	    this.#state.activeMarker = null;
+	    this.#state.activeLayer = null;
 	}
     }
 
-    open(marker) {
-	this.activeMarker = marker;
+    open(layer) {
+	this.activeLayer = layer;
 	this.#state.pane_open = true;
 	this.reflectState();
 	this.saveState();
     }
 
     close() {
-	this.activeMarker = null;
+	this.activeLayer = null;
 	this.#state.pane_open = false;
 	this.reflectState();
 	this.saveState();
@@ -291,14 +338,13 @@ const app = new class {
     reflectState() {
 	const wasClosed = !this.DOM.container.classList.contains('open');
 	if (this.DOM.container.classList.toggle('open', this.#state.pane_open)) {
-	    if (this.activeMarker) {
-		this.DOM.result.replaceChildren(this.activeMarker.card);
-		const latlng = this.activeMarker.getLatLng(),
-		      pan = () => this.map.panTo(latlng);
+	    if (this.activeLayer) {
+		this.DOM.result.replaceChildren(this.activeLayer.I.card);
+		const pan = () => this.activeLayer.I.center(this.map);
 		wasClosed ? this.map.once('resize', pan) : pan();
-		this.DOM.container.classList.add('marker-view');
+		this.DOM.container.classList.add('layer-view');
 	    } else {
-		this.DOM.container.classList.remove('marker-view');
+		this.DOM.container.classList.remove('layer-view');
 	    }
 	}
     }
@@ -306,7 +352,7 @@ const app = new class {
     // Save state in history
     saveState() {
 	if (JSON.stringify(this.#state) != JSON.stringify(history.state)) {
-	    history.pushState(this.#state, '', '#' + (this.#state.activeMarker || ''));
+	    history.pushState(this.#state, '', '#' + (this.#state.activeLayer || ''));
 	}
     }
 
@@ -323,19 +369,19 @@ const app = new class {
     }
     
     hideAll() {
-	this.#markers.forEach((m) => m.hide());
+	this.#layers.forEach((m) => m.hide());
     }
 
     showAll() {
-	this.#markers.forEach((m) => m.show());
+	this.#layers.forEach((m) => m.show());
     }
     
     hide(tag) {
-	this.#markers.tag(tag).forEach((m) => m.hide());
+	this.#layers.tag(tag).forEach((m) => m.hide());
     }
     
     show(tag) {
-	this.#markers.tag(tag).forEach((m) => m.show());	
+	this.#layers.tag(tag).forEach((m) => m.show());	
     }
 }(document.querySelector('#main'), "features.json");
 

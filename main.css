@@ -63,7 +63,16 @@ html, body, #main {
     border: solid thin #00f;
     z-index: 1000!important;
 }
-.leaflet-marker-icon.hidden {
+
+path {
+    stroke: #55f;
+    stroke-width: 6;
+}
+path.active {
+    stroke: #00f;
+}
+
+.hidden {
     display: none;
 }
 
@@ -97,8 +106,8 @@ html, body, #main {
     height: 50dvh;
 }
 
-#main:not(.marker-view) #result,
-#main.marker-view #list {
+#main:not(.layer-view) #result,
+#main.layer-view #list {
     display: none;
 }
 
