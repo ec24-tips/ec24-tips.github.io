@@ -180,6 +180,148 @@
         ],
         "type": "Point"
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Arcade Pizzeria",
+        "category": "restaurant",
+        "tags": [
+          "lunch",
+          "dinner",
+          "pizza",
+          "italian"
+        ],
+        "description": "Best Napoletanean Pizza",
+        "links": [
+          "https://arcadepizzeria.ch/"
+        ],
+        "recommenders": [
+          "Bertram"
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          8.524327227735569,
+          47.37104488803689
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bierwerk Züri",
+        "category": "bar",
+        "tags": [
+          "beer"
+        ],
+        "description": "Microbrewery, but also all their <del>focaccias</del>focacce are outstanding; the vegan option will not disappoint.",
+        "links": [
+          "http://bierwerkzueri.ch/"
+        ],
+        "recommenders": [
+          "Bertram"
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          8.531601727218913,
+          47.37945361318663
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The International Beer Bar",
+        "category": "bar",
+        "tags": [
+          "beer"
+        ],
+        "description": "For beer lovers; finest, weekly changing, selection of international beers, with a focus on IPAs.",
+        "links": [
+          "http://www.theinternational.ch/"
+        ],
+        "recommenders": [
+          "Bertram"
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          8.52870813322184,
+          47.38288833687014
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Oberdorfbeck Vohdin",
+        "category": "bakery",
+        "tags": [
+        ],
+        "description": "The oldest bakery in Zurich, est. 1626. Try the buttered pretzel or amaretti. Open Tue-Fri 8-15.",
+        "links": [
+        ],
+        "recommenders": [
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          8.545624923495183,
+          47.36866958309602
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Äss-Bar Stadelhofen",
+        "category": "bakery",
+        "tags": [
+        ],
+        "description": "Pioneers of the anti-foodwaste movement in Switzerland, selling sandwiches, cakes, pastries from the day before at very reduced prices. Try it if you're after a quick and cheap snack.",
+        "links": [
+          "http://www.aess-bar.ch/"
+        ],
+        "recommenders": [
+          "Felix"
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          8.548422910460488,
+          47.366567970718165
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Äss-Bar Zürich",
+        "category": "bakery",
+        "tags": [
+        ],
+        "description": "Pioneers of the anti-foodwaste movement in Switzerland, selling sandwiches, cakes, pastries from the day before at very reduced prices. Try it if you're after a quick and cheap snack.",
+        "links": [
+          "http://www.aess-bar.ch/"
+        ],
+        "recommenders": [
+          "Felix"
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          8.543792358686716,
+          47.37273412344044
+        ],
+        "type": "Point"
+      }
     }
   ]
 }

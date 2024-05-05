@@ -840,12 +840,14 @@
           "club",
 	  "lakeside"
         ],
-        "description": "<p>Arts and food complex in an old factory. Outdoor sitting space right on the lake.</p><p>It's a 40 minutes (3km) stroll from the conference center, through the Mythenquai park. Alternatively you can take bus 161 or 165 from Bürkliplatz to Rote Fabrik.</p>",
+        "description": "<p>Arts and food complex (restaurant \"Ziegel oh Lac\") in an old factory. Outdoor sitting space right on the lake.</p><p>It's a 40 minutes (3km) stroll from the conference center, through the Mythenquai park. Alternatively you can take bus 161 or 165 from Bürkliplatz to Rote Fabrik.</p>",
         "links": [
-          "https://rotefabrik.ch/#/"
+          "https://rotefabrik.ch/#/",
+          "http://www.ziegelohlac.ch/"
         ],
         "recommenders": [
-          "Luca"
+          "Luca",
+          "Bertram"
         ]
       },
       "geometry": {
@@ -1086,7 +1088,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Café 1842",
+        "name": "Café & Conditorei 1842",
         "category": "café",
         "tags": [
           "breakfast",
@@ -1094,12 +1096,13 @@
           "brunch",
           "tea time"
         ],
-        "description": "Tea room in the heart of the old town. Excellent pastries.",
+        "description": "Tea room in the heart of the old town, with various ornate rooms. Excellent pastries and hot chocolate.",
         "links": [
           "https://www.cafe1842.ch/"
         ],
         "recommenders": [
-          "Luca"
+          "Luca",
+          "Felix"
         ]
       },
       "geometry": {
