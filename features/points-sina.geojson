@@ -1,0 +1,160 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Platte 14",
+          "category": "restaurant",
+          "tags": ["canteen","lunch","vegan","vegetarian"],
+          "description": "Best canteen around ETH, but open only for lunch from Monday to Friday. Rather cheap, but only 2 choices.",
+          "links": ["https://platte14.ch/en/"],
+      "recommenders": ["Sina"]
+      },
+        "geometry": {
+          "coordinates": [
+            8.55259,
+            47.37416
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Tiefenbrunnen Park",
+          "category": "beach",
+          "tags": [
+            "park",
+            "seebad"
+          ],
+          "description": "</p>A very calm place to swim in the lake: A tiny park, large stones on which to sit and usually not too many people around. The park is however not always as clean as the rest of the city, and there is no real beach (you get into half a meter of water directly from 30cm above the water). Be careful to not get too close to the ports which are at both sides of the park. <p/></p>This is not an official beach, so there is no surveillance, no changing room, and generally no infrastructure for swimming. There is also no entrance fee.<p/>",
+          "recommenders": [
+            "Sina"
+          ]
+        },
+        "geometry": {
+          "coordinates": [
+            8.56128,
+            47.34909
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Loorenchopf",
+          "category": "viewpoint",
+          "tags": [
+            "hike"
+          ],
+          "description": "</p>The highest viewpoint around Zürich on this side of the lake. A wooden tower allows to climb above the trees and to enjoy a view until the alps.<p/></p>The only way to get there is by walking from one of the Tramway stations, such as Burgwies or from the zoo, which makes for a short hike of about 10km, with a change of altitude of about 250m and takes about 3h (including the way back). If you get lost, go down the hill: As it is encircled by Zürich and neighboring towns, this will help finding mean of transportation back to the city.<p/>",
+          "links": [
+            "https://www.zuerich.com/en/visit/sport/trail-loorenkopf"
+          ],
+          "recommenders": [
+            "Sina"
+          ]
+        },
+        "geometry": {
+          "coordinates": [
+            8.5994,
+            47.36976
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Landesmuseum/National museum",
+          "category": "sightseeing",
+          "tags": [
+            "museum"
+          ],
+          "description": "The Landesmuseum is a museum with exhibitions mostly on swiss history and culture. It is an interesting place to spend a rainy and cold afternoon. Entrance costs CHF 10 for students, 13 for adults.",
+          "links": [
+            "https://www.landesmuseum.ch/en"
+          ],
+          "recommenders": ["Sina"]
+        },
+        "geometry": {
+          "coordinates": [
+            8.54065,
+            47.37900
+          ],
+          "type": "Point"
+        }
+      },
+    {
+        "type": "Feature",
+        "properties": {
+          "name": "Zolliker Allmende",
+          "category": "viewpoint",
+          "tags": [],
+          "description": "Between the village of Zollikon and the forest above it, the bench below the tree is a beautiful place to look over lake Zurich to the Albis. It is often a bit crowded on sunny week-ends.",
+          "recommenders": [
+            "Sina"
+          ]
+        },
+        "geometry": {
+          "coordinates": [
+            8.58366,
+            47.34080
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Polyterrasse",
+          "category": "viewpoint",
+          "tags": [],
+          "description": "Polyterrasse offers a nice view over a small part of the city, just in front of ETH, where the affiliated events take place. It is true that the lake is almost invisible and the main station hides behind the trees from April to November, but at least you see many churches.",
+          "links": [
+            "https://www.zuerich.com/en/visit/attractions/polyterrasse"
+          ],
+          "recommenders": [
+            "Sina"
+          ]
+        },
+        "geometry": {
+          "coordinates": [
+            8.54655,
+            47.37589
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+        
+          "name": "Liebfrauenkirche",
+          "category": "sightseeing",
+          "tags": [
+            "church"
+          ],
+          "description": "One of the first three catholic churches to be constructed in Zurich after Zwingli. It was built from 1893 to 1894.",
+          "links": [
+            "https://liebfrauen.ch/",
+            "https://de.wikipedia.org/wiki/Liebfrauenkirche_(Z%C3%BCrich)"
+          ],
+          "recommenders": [
+            "Sina"
+          ]
+        },
+        "geometry": {
+          "coordinates": [
+            8.54524,
+            47.37938
+          ],
+          "type": "Point"
+        }
+      }
+    ]
+  }
+  
+  
