@@ -24,7 +24,7 @@ def validate(node, uids, filename):
         for field in ['name', 'description', 'category', 'tags']:
             if field not in props:
                 raise ValueError(f'{filename}: Missing property `{field}` in GeoJSON object')
-        if 'id' in node:
+        if 'id' in node and node['id']:
             uid = node['id']
             if uid in uids:
                 raise RuntimeError(f"{filename}: UID '{uid}' is already in the collection")
