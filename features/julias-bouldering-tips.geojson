@@ -6,12 +6,12 @@
       "properties": {
         "name": "Boulderlounge",
         "category": "sport",
-        "tags": "bouldering,indoor",
+        "tags": ["bouldering","indoor"],
         "description": "Beginner-friendly bouldering gym only a bit outside of Zürich",
         "links": [
           "https://www.boulderlounge.ch/"
         ],
-        "recommenders": "Julia"
+        "recommenders": ["Julia"]
       },
       "geometry": {
         "coordinates": [
@@ -31,8 +31,8 @@
           "climbing"
         ],
         "description": "Climbing gym for both bouldering and lead climbing. Very busy on weekdays, special offers on Saturday",
-        "recommenders": "Julia",
-        "links": "https://www.kletterzentrum.com/standorte/schlieren/"
+        "recommenders": ["Julia"],
+        "links": ["https://www.kletterzentrum.com/standorte/schlieren/"]
       },
       "geometry": {
         "coordinates": [
@@ -50,7 +50,7 @@
         "links": [
           "https://minimum.ch/bouldern/hallen/leutschenbach/"
         ],
-        "tags": "bouldering,indoor",
+        "tags": ["bouldering","indoor"],
         "recommenders": [
           "Julia"
         ],
@@ -72,7 +72,7 @@
         "links": [
           "https://minimum.ch/bouldern/hallen/flueela/"
         ],
-        "tags": "bouldering,indoor,crashpad rental",
+        "tags": ["bouldering","indoor","crashpad rental"],
         "description": "Bouldering Gym",
         "recommenders": [
           "Julia"
@@ -91,7 +91,7 @@
       "properties": {
         "name": "Murgtal Bouldering Location",
         "category": "sport",
-        "links": "https://bouldern.ch/",
+        "links": ["https://bouldern.ch/"],
         "tags": [
           "bouldering",
           "outdoor"
@@ -119,8 +119,8 @@
         ],
         "category": "sport",
         "description": "Switzerland's most popular outdoor bouldering location. Crashpad and shoe rental at the Edelweiss Restaurant in the village.",
-        "links": "https://www.bodhi.ch/",
-        "recommenders": "Julia"
+        "links": ["https://www.bodhi.ch/"],
+        "recommenders": ["Julia"]
       },
       "geometry": {
         "coordinates": [
@@ -135,10 +135,10 @@
       "properties": {
         "name": "Ruedi Bergsport",
         "category": "sport",
-        "tags": "crasphad rental, rental",
+        "tags": ["crasphad rental", "rental", "shopping"],
         "description": "Rental place for mountain sports equipment.",
-        "links": "https://www.ruedi-bergsport.ch/",
-        "recommenders": "Julia"
+        "links": ["https://www.ruedi-bergsport.ch/"],
+        "recommenders": ["Julia"]
       },
       "geometry": {
         "coordinates": [
