@@ -322,6 +322,113 @@
         ],
         "type": "Point"
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fink's Südtiroler Knödelküche",
+        "category": "restaurant",
+        "tags": [
+          "lunch",
+          "dinner",
+          "austrian",
+          "vegetarian",
+          "vegan"
+        ],
+        "description": "Taste the world of Tirolese Knödel (bread dumplings) – speck, spinach, cheese, beetroot, herbs, mushrooms, nougat, honey, ...",
+        "links": [
+          "http://finks.eu/zurich"
+        ],
+        "recommenders": [
+          "Tabea"
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          8.533930999604394,
+          47.381795242426136
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Klara's kitchen",
+        "category": "restaurant",
+        "tags": [
+          "breakfast",
+          "lunch",
+          "vegan"
+        ],
+        "description": "Fully-vegan menu with tasty curries and bowls, müesli and cakes.",
+        "links": [
+          "https://www.klaraskitchen.ch/"
+        ],
+        "recommenders": [
+          "Felix"
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          8.543742815209526,
+          47.382760246413085
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Lemon Grass",
+        "category": "restaurant",
+        "tags": [
+          "lunch",
+          "thai"
+        ],
+        "description": "Take-away only thai place, providing a cheap lunch option near ETH.",
+        "links": [
+          "http://the-lemon-grass.ch/"
+        ],
+        "recommenders": [
+          "Felix"
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          8.547954809254463,
+          47.37963279682785
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kleine Freiheit",
+        "category": "café",
+        "tags": [
+          "breakfast",
+          "lunch",
+          "dinner",
+          "vegetarian",
+          "vegan"
+        ],
+        "description": "Cozy little café with outdoor seating near ETH, serving mezze, salads, pitas, sweets.",
+        "links": [
+          "https://kleinefreiheit.ch/"
+        ],
+        "recommenders": [
+          "Felix"
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          8.544536078707722,
+          47.37916895776456
+        ],
+        "type": "Point"
+      }
     }
   ]
 }
