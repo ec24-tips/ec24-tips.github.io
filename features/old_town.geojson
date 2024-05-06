@@ -1,0 +1,1002 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Vereinigte Zünfte zur Gerwe und zur Schuhmachern",
+        "category": "sightseeing",
+        "tags": [
+          "zunfthaus"
+        ],
+        "description": "<p>The <em>United Guild of Tanners and Shoemakers</em> (and leather workers and parchment makers) started out as separate guilds in 1336, then united in 1877. Since 1923 it hosts the luxury hotel Savoy-Baur en Ville.</p><p>The Zunfthaus was built in 1838 in the place of a presbytery, the facade dates from 1907, further renovations were performed in 1975.</p>",
+        "links": [
+          "http://www.gerwe-schuhmacher.ch/"
+        ],
+        "recommenders": ["Rachel"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.539560297019335,
+          47.36974005499508
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Zunfthaus zur Waag",
+        "category": "sightseeing",
+        "tags": [
+          "zunfthaus"
+        ],
+        "description": "<p>The wool and flax weavers united in 1440 to form the <em>Weavers Guild</em> and took their name from the newly acquired <em>House of the Scale</em>. The hat makers and the flax merchants joined the guild at a later time</p><p>The house was build in 1287 for a <em>Bürger</em> named Michael. The escutcheon giving its name to the house was added in 1315 by Peter Schmid, personal apothecary of the Fraumünster abess. The house was gifted to the Grossmünster abbey and finally sold to the guild in 1385 for 108 guilders. In 1636 the guild bought the bordering house and tore down both buildings to rebuild a new house.</p><p>On the second floor (inside) painted glasses and a painted stove were offered by the guild's chiefs. The house in build in Renaissance style with references to the Gothic style. The interiors were renovated in 1778, the façade in 1909. In 2014 the façade was painted over in blue and yellow, the colors of the guild.</p>",
+        "links": [
+          "https://www.zunfthaus-zur-waag.ch/"
+        ],
+        "recommenders": ["Rachel"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.540320894178137,
+          47.37020830543088
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Zunfthaus zum Widder",
+        "category": "sightseeing",
+        "tags": [
+          "zunfthaus"
+        ],
+        "description": "<p>The <em>Butchers and Cattlemen Guld</em> hosts today the Widder Hotel, built in place of 7 medieval houses while preserving their layout. Each rooms is unique and some of them have preserved the original wall paintings and stuccoes.</p><p> From the 17th to the 19th century the Renneweg was the main commercial street in Zurich. Number 1, property of the Butchers since 1401, was entirely rebuilt in 1533; number 3 belonged from the 14th to the 16th century to the Wool Weavers, the Carpenters and the Taylors; number 5 was the residence of a wine merchant from the 12th to the 13th century, number 7 was build in the 13th century and renewed in 1623 by a furrier. The house on Widdergasse 4 was build in the 14th century; number 6 was build around 1300 and is a rare example of preserved medieval architecture, keeping its original ceilings. Augustinergasse 24, built around 1200, belonged to the nearby church; number 28 preserves some of the original paintings of the 16h and 18th century and a stuccoed pavillon of the 17th.</p><p>Once per year, the guild invites the other guilds for a mutton meal.</p>",
+        "links": [
+          "https://www.zunft-widder.ch/"
+        ],
+        "recommenders": ["Rachel"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.539860783562347,
+          47.37242630235292
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Zunft zur Schiffleuten",
+        "category": "sightseeing",
+        "tags": [
+          "zunfthaus"
+        ],
+        "description": "<p>The <em>Weinplatz</em> lies on the location of the harbour of the celtic-roman town <em>Turicum</em>, built in the 1st century AD.  In the Middle Ages it hosted the city's granaries, and in the 17th century the wine market, hence the name.</p><p>A <em>House of the Stork</em> on this location is mentioned for the first time in the archives of 1357. The namesake is unclear, a legend says black storks were once seen on its roof. The house became a hotel in the 15th century. It was rebuilt in 1938</p><p>The <em>Fischermen and Boatmen Guild</em> was founded in 1336; in 1447 Fredrik III granted it the right to transport people and goods, via the Limmat and the Rhine, all the way to the North sea.</p><p>Today the guild focuses on nautical sports, organizes a fish meal in January and a pike meal after <em>Sechseläuten</em>. Every 3 years it organizes a joust on the Limmat and every 10 years a drakkar river fare to Strasbourg.</p>",
+        "links": [
+          "https://www.schiffleuten.ch/",
+          "https://en.wikipedia.org/wiki/Hotel_zum_Storchen"
+        ],
+        "recommenders": ["Rachel"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.541844429456802,
+          47.37116222907599
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Zunft zur Schneidern",
+        "category": "sightseeing",
+        "tags": [
+          "zunfthaus"
+        ],
+        "description": "<p>Established in 1336, the guild federates taylors, furriers and shearers. The <em>House of the Throne (Haus zum Königstuhl)</em>, built in the 15th century, belonged to the mayor Rudolf Stüssi, who gave the name to the square. It was bought by the guild in 1938. During the renovation works an ancient wall painting was discovered and transferred to the national museum.</p>",
+        "links": [
+          "https://www.schneidern.ch/"
+        ],
+        "recommenders": ["Rachel"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.543547759441708,
+          47.37265302017019
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Zunfthaus zur Schmiden",
+        "category": "sightseeing",
+        "tags": [
+          "zunfthaus"
+        ],
+        "description": "<p>The <em>House of the Gilded Horn (Haus zem guldin Horn)</em> belongs to the Smiths Guild since 1412. The gothic Guild's Room was built in 1520, the restaurant opened in 1701. It is the oldest continuously owned secular building in Zurich. In 2001 the guild bought the <em>House of the Black Eagle (zum Schwarzen Adler)</em> to the south.</p><p>The guild was founded by the city's smiths, the armourers, the plate makers and the bell makers. In 1433 they were joined by the shearers and the barbers, in 1654 by the locksmiths. The modern-day forge is in the Integra-Siemens building in Wallisellen and is still regularly used to train the guild's members.</p>",
+        "links": [
+          "https://www.zunfthausschmiden.ch/"
+        ],
+        "recommenders": ["Rachel"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.543890918795938,
+          47.37222219517898
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Zunfthaus zur Saffran",
+        "category": "sightseeing",
+        "tags": [
+          "zunfthaus"
+        ],
+        "description": "<p>The Merchants Guild bought, demolished and rebuilt several houses between the end of the 14h and the 17th century. The modern-day building dates from 1719-1723.</p><p>The guild, the unioun of 18 brotherhoods in the 14th century, is the first to be named in the archives of 1336. Other professions joined it later, such as the confectioners, the taylorwomen, the button makers, &hellip;</p>",
+        "links": [
+          "https://zunfthauszursaffran.ch/",
+          "https://en.wikipedia.org/wiki/Zunfthaus_zur_Saffran"
+        ],
+        "recommenders": ["Rachel"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.543002031990056,
+          47.371487498065676
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Zunfthaus zur Kämbel",
+        "category": "sightseeing",
+        "tags": [
+          "zunfthaus"
+        ],
+        "description": "<p>Originally the guild federated the gardners, the grocers, the oil and wine merchants, collectively known as <em>Grempler</em>. In 1487 the guild buys the <em>House of the Camel</em>, taking the name. The coat of arms is still visible on the building. The most famous member of the guild is the knight and guildmaster Hans Waldmann (1435–1489), mayor, statesman and general, to whom a statue was erected near the <em>Münsterbrucke</em>. The guild was disbanded in 1801.</p><p>The moder house, the <em>Zunfthaus zur Haue</em>, was built on the site of three houses, the older of which dated from 1373. It belonged to several major figures, among them the mayer Salomon Hirzel (1580–1652), whom the deer on the roof commemorates, or the merchant Beckert (in 1878), who had the facade painted and added the gothic windows. In 1956, 150 years after its disbanding, the guild formed again and bought the house.</p><p>On <em>Sechselaüten</em> the guild members dress up as Bedouins and parade with the zoo's camels. Ironically, the name of the old house comes from <em>Kämeltiere</em>, i.e. from the Angora goats that the original owners, the furriers, used to farm.</p>",
+        "links": [
+          "https://kaembel.ch/",
+          "https://en.wikipedia.org/wiki/Zunft_zum_K%C3%A4mbel",
+          "https://en.wikipedia.org/wiki/Zunfthaus_zur_Haue"
+        ],
+        "recommenders": ["Rachel"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.543051187156038,
+          47.371376531442024
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Haus zum Rüden",
+        "category": "sightseeing",
+        "tags": [
+          "zunfthaus"
+        ],
+        "description": "<p>The <em>Constables Guild (Gesellschaft zur Constaffel)</em> was created in 1336 by Rudolf Brun to gather the nobles, the ministers of the <a href='#fraumunster'><em>Fraumünster</em> abbey</a> and some rich merchants, who formed the electorate of the city. Prior to that, the election of the mayor had been the exclusive privilege of the <em>Fraumünster</em> abbess; by forming the guild, Brun effectively and durably seized the power from the abbey.</p><p>The house takes its name from the <em>Rüden</em>, the wolf hound on its coat of arms. Originally it had been a small wooden building, formerly used as mint by the abbess. In 1348 the ground floor was rebuilt in masonry to host to town council. The arcade passage dates from the 17th century. The last restorations have preserved the wooden gothic hall of the restaurant.</p>",
+        "links": [
+          "https://www.constaffel.ch/",
+          "https://en.wikipedia.org/wiki/Haus_zum_Rüden"
+        ],
+        "recommenders": ["Rachel"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.543121405767721,
+          47.37081218317067
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Zunft zur Zimmerleuten",
+        "category": "sightseeing",
+        "tags": [
+          "zunfthaus"
+        ],
+        "description": "<p>In the first half of the 15th century, the <em>Carpenters Guild</em> bought a wooden house dating from the 12th century. The building was rebuilt in masonry with a wooden elevated floor in 1708, then expanded in 1782 after buying a neighboring house. It has received no major modifications since. It was damaged by fire in 2007 and restored in 2010.</p><p>The carpenters were later joined by the coach makers, the masons, the oven builders, the coopers and the winnowers.</p>",
+        "links": [
+          "https://zimmerleuten.ch/",
+          "https://en.wikipedia.org/wiki/Zunfthaus_zur_Zimmerleuten"
+        ],
+        "recommenders": ["Rachel"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.543219716099259,
+          47.37063780471095
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Zunft zum Weggen",
+        "category": "sightseeing",
+        "tags": [
+          "zunfthaus"
+        ],
+        "description": "<p>A <em>House of the Herring</em> was built in 1430 on the grounds of a farm. It was sold to the Grossmünster's chaplain and used as presbytery for 200 years. In 1756 it was sold, renovated and renamed to <em>House of the White Hound (Haus zum weissen Wind)</em>. It became a brewery in 1836 and a restaurant in 1873. The <em>Bakers and Millers Guild</em> bought the building in 2002.</p>",
+        "links": [
+          "https://www.weggenzunft.ch/"
+        ],
+        "recommenders": ["Rachel"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.545512829656076,
+          47.36882132501867
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Zunft zur Meisen",
+        "category": "sightseeing",
+        "tags": [
+          "zunfthaus"
+        ],
+        "description": "<p>The <em>Innkeepers Guld</em> (later also joined by the cabaret owners, the saddle makers and the painters) had this hose built in 1449 on the grounds of a house belonging to the abbot of Einsiedeln. The present-day building was built in 1752, to the outrage of the citizens because the contract had been won by two women, widows of masons, who had outbid their male rivals. In the 18th century its roof was equipped with an observatory <em>(Urania Sternwarte)</em>. Until 2018 the building hosted the porcelains of the National Museum.</p>",
+        "links": [
+          "https://www.zunftzurmeisen.org/",
+          "https://en.wikipedia.org/wiki/Zunfthaus_zur_Meisen"
+        ],
+        "recommenders": ["Rachel"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.541734118465968,
+          47.37008180005034
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fraumünster",
+        "category": "sightseeing",
+        "tags": [
+          "church",
+          "zunfthaus"
+        ],
+        "description": "<p>The <em>Fraumünster</em> church is the only remains of a female Benedictine abbey founded in 853. Receiving imperial privileges in 1218 from Frederick II, its abbess became the <em>de facto</em> ruler of Zurich, assigning the mayor and minting coins. The establishment of the guilds <em>(Zünfte)</em> in 1336 considerably weakened its power. The abbey was dissolved in 1524 during the Zwingli reformation. In 1898 the buildings were demolished leaving only the church standing.</p><p>Enter the church to admire the stained glass windows painted by Marc Chagall and Augusto Giacometti.</p><p>In the 19th century, when women started being no longer tolerated in the guilds, they formed the <em>Gesellschaft zu Fraumünster</em>, in reference to the heydays of the abbey. The sisterhood organizes a medieval fair every 3 years, and participates to the parade on Sechseläuten since 2010.</p>",
+        "links": [
+          "https://fraumuenstergesellschaft.ch/",
+          "https://en.wikipedia.org/wiki/Fraumünster",
+          "https://en.wikipedia.org/wiki/Gesellschaft_zu_Fraumünster"
+        ],
+        "recommenders": ["Rachel"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.541233956793207,
+          47.36972612225287
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Walk in the old town",
+        "category": "sightseeing",
+        "tags": [
+          "hike",
+          "zunfthaus"
+        ],
+        "description": "<p>This one-hour-and-a-half tour starting from the conference center takes you through the streets of Zurich's old town to the discovery of its most notable buildings. Ideal for <s>that session you had planned to skip</s> the free afternoon!</p><p>Most of Zurich's medieval heritage has been lost or transformed, however traces of its past survive in the churches and the <em>Zunfthäuser</em> (guild houses). In 1336 the mayor Rudolf Brun established by decree 14 guilds (<em>Zünfte</em>), with jurisdiction on the respective trades. The guilds were prosperous throughout the medieval and the early modern era, and little by little shaped Zurich's urban landscape by acquiring and renovating buildings for hosting their meetings. Today the guilds have ceased playing an administrative role, but still survive as folkloristic associations taking part to the annual <em>Sechseläuten (the strokes of six)</em> parade culminating in the burning of the <em>Böögg</em> on Sechseläutenplatz (in front of the opera house).</p><p>Of the 14 original <em>Zünfte</em> 12 remain today, each owning a <em>Zunfthaus</em>. Some of these operate as restaurants or hotels and can thus be visited. Others are only open to visits when the <em>Zunft</em> holds an event.</p>",
+        "links": [
+          "https://en.wikipedia.org/wiki/Zünfte_of_Zürich",
+          "https://en.wikipedia.org/wiki/Sechseläuten"
+        ],
+        "recommenders": ["Rachel"]
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            8.538275458677674,
+            47.36626542024652
+          ],
+          [
+            8.538819837450944,
+            47.36550832407838
+          ],
+          [
+            8.539727137678568,
+            47.36596061743933
+          ],
+          [
+            8.539025630933281,
+            47.366697495299775
+          ],
+          [
+            8.53887624587503,
+            47.36689417285825
+          ],
+          [
+            8.538779246882399,
+            47.36695688410106
+          ],
+          [
+            8.53823702174688,
+            47.3675913449639
+          ],
+          [
+            8.539822658807111,
+            47.3679205226272
+          ],
+          [
+            8.539293506673431,
+            47.36936730196368
+          ],
+          [
+            8.539207764160778,
+            47.36971085103474
+          ],
+          [
+            8.539203335293706,
+            47.369979247818236
+          ],
+          [
+            8.539439492550855,
+            47.370070413671925
+          ],
+          [
+            8.539706350250555,
+            47.37009280526104
+          ],
+          [
+            8.540046416700307,
+            47.370254344301145
+          ],
+          [
+            8.540324609286614,
+            47.370092193639266
+          ],
+          [
+            8.541121218182639,
+            47.370080086340266
+          ],
+          [
+            8.541442898328256,
+            47.36993102321571
+          ],
+          [
+            8.541888765480564,
+            47.36991681216165
+          ],
+          [
+            8.541914245306288,
+            47.37046120212483
+          ],
+          [
+            8.5418912744245,
+            47.3708132553231
+          ],
+          [
+            8.541894493713983,
+            47.371194436345945
+          ],
+          [
+            8.541888054724524,
+            47.3714691647601
+          ],
+          [
+            8.54190414970239,
+            47.37153457635449
+          ],
+          [
+            8.542078002427871,
+            47.371595626843
+          ],
+          [
+            8.542058685458215,
+            47.3718311066373
+          ],
+          [
+            8.541865515763135,
+            47.37192268182872
+          ],
+          [
+            8.54184207955825,
+            47.37212305711628
+          ],
+          [
+            8.541804220552223,
+            47.37217067313725
+          ],
+          [
+            8.54179340369393,
+            47.372243928469686
+          ],
+          [
+            8.541838311843577,
+            47.37254417247746
+          ],
+          [
+            8.541781523334578,
+            47.37257530578577
+          ],
+          [
+            8.541705805322465,
+            47.37281155205605
+          ],
+          [
+            8.541686932858028,
+            47.37305718790148
+          ],
+          [
+            8.541538377910797,
+            47.37316780496468
+          ],
+          [
+            8.541230097433413,
+            47.373305156032984
+          ],
+          [
+            8.540900183237397,
+            47.37341686797143
+          ],
+          [
+            8.540759564071465,
+            47.373415036629865
+          ],
+          [
+            8.540700071347857,
+            47.37338939784436
+          ],
+          [
+            8.540735228083122,
+            47.37305792366493
+          ],
+          [
+            8.541297704745602,
+            47.37298100674991
+          ],
+          [
+            8.541308521604947,
+            47.37283816075339
+          ],
+          [
+            8.540447380983665,
+            47.37267596705857
+          ],
+          [
+            8.540450087009361,
+            47.37227489581571
+          ],
+          [
+            8.540274462887481,
+            47.372283155821464
+          ],
+          [
+            8.540263800870349,
+            47.37202802527369
+          ],
+          [
+            8.53991550833689,
+            47.371951004488125
+          ],
+          [
+            8.539641853159765,
+            47.37209060186936
+          ],
+          [
+            8.539471260898296,
+            47.37205931222596
+          ],
+          [
+            8.539414396811566,
+            47.37217002934227
+          ],
+          [
+            8.538852863950893,
+            47.372297594426755
+          ],
+          [
+            8.538682271689396,
+            47.37230722196816
+          ],
+          [
+            8.538607637573705,
+            47.3727236114359
+          ],
+          [
+            8.539538787155408,
+            47.373043723742285
+          ],
+          [
+            8.539961711427793,
+            47.372497368476644
+          ],
+          [
+            8.540217599819357,
+            47.372295190475
+          ],
+          [
+            8.540512581940163,
+            47.372263901410776
+          ],
+          [
+            8.54080401038695,
+            47.37217966029755
+          ],
+          [
+            8.540896414528845,
+            47.3719871086773
+          ],
+          [
+            8.540949724610357,
+            47.37177530108269
+          ],
+          [
+            8.540770038646087,
+            47.37155889987031
+          ],
+          [
+            8.54095420788309,
+            47.37145873269259
+          ],
+          [
+            8.540979083745697,
+            47.37129746907527
+          ],
+          [
+            8.541547724618312,
+            47.37129265521307
+          ],
+          [
+            8.541727390318698,
+            47.371489211267544
+          ],
+          [
+            8.542313801217489,
+            47.37167935779212
+          ],
+          [
+            8.54290512986799,
+            47.371752985252385
+          ],
+          [
+            8.542841158699105,
+            47.37247023912744
+          ],
+          [
+            8.542830495374005,
+            47.3727951677981
+          ],
+          [
+            8.543274746054635,
+            47.372814422696564
+          ],
+          [
+            8.543356487851895,
+            47.37299975086688
+          ],
+          [
+            8.543328055808558,
+            47.373187485100544
+          ],
+          [
+            8.543747428451098,
+            47.373225994604525
+          ],
+          [
+            8.543761644473449,
+            47.372975682326995
+          ],
+          [
+            8.543754536461591,
+            47.37282164341187
+          ],
+          [
+            8.543797184527335,
+            47.37255448110156
+          ],
+          [
+            8.543846940603544,
+            47.37230416563716
+          ],
+          [
+            8.5445861737376,
+            47.37240766159806
+          ],
+          [
+            8.545026871479422,
+            47.37248227803423
+          ],
+          [
+            8.54519390973573,
+            47.37249190554144
+          ],
+          [
+            8.545702132514919,
+            47.37249431241787
+          ],
+          [
+            8.545737672568748,
+            47.37243895422918
+          ],
+          [
+            8.545623944393924,
+            47.372308982601396
+          ],
+          [
+            8.545300529898583,
+            47.37213568659959
+          ],
+          [
+            8.54491941819856,
+            47.37199552120913
+          ],
+          [
+            8.544638651768935,
+            47.37182944489794
+          ],
+          [
+            8.544322345282637,
+            47.37168984411616
+          ],
+          [
+            8.543913634655809,
+            47.37154542912569
+          ],
+          [
+            8.544153903249878,
+            47.37129974848841
+          ],
+          [
+            8.544278291667212,
+            47.371138484872745
+          ],
+          [
+            8.544381357824903,
+            47.370888162686924
+          ],
+          [
+            8.544420451885372,
+            47.37067394371934
+          ],
+          [
+            8.544502192912034,
+            47.37037788686587
+          ],
+          [
+            8.54417167040478,
+            47.37033456133207
+          ],
+          [
+            8.543905119996111,
+            47.37036825897272
+          ],
+          [
+            8.543631461576922,
+            47.370300863670394
+          ],
+          [
+            8.54354616544552,
+            47.37016607280833
+          ],
+          [
+            8.543574597488885,
+            47.37005775847308
+          ],
+          [
+            8.54382928964165,
+            47.36996697669966
+          ],
+          [
+            8.544163366154152,
+            47.36982977798641
+          ],
+          [
+            8.54444413258517,
+            47.369707020940126
+          ],
+          [
+            8.544554306755316,
+            47.36950242525879
+          ],
+          [
+            8.544700020978695,
+            47.36933152705606
+          ],
+          [
+            8.54494628584007,
+            47.369133781281704
+          ],
+          [
+            8.545230606274941,
+            47.368936404463085
+          ],
+          [
+            8.545407033434344,
+            47.36882343446649
+          ],
+          [
+            8.545609611744396,
+            47.368621242380016
+          ],
+          [
+            8.545072956921814,
+            47.36845756250435
+          ],
+          [
+            8.544859716594573,
+            47.368375722376044
+          ],
+          [
+            8.544507870055867,
+            47.368455155443655
+          ],
+          [
+            8.544482992017805,
+            47.36831313866264
+          ],
+          [
+            8.544852607120191,
+            47.367956891772536
+          ],
+          [
+            8.545119157528859,
+            47.36770896158089
+          ],
+          [
+            8.545247101724613,
+            47.36759101379943
+          ],
+          [
+            8.545442572739148,
+            47.367410481502304
+          ],
+          [
+            8.545407032685347,
+            47.36735511797778
+          ],
+          [
+            8.545478112807842,
+            47.3672275409958
+          ],
+          [
+            8.54605741569614,
+            47.366770186808935
+          ],
+          [
+            8.545829959347998,
+            47.36665705121396
+          ],
+          [
+            8.546224454893036,
+            47.36574714328859
+          ],
+          [
+            8.546334626976346,
+            47.365268111670986
+          ],
+          [
+            8.545499435696456,
+            47.36500572553376
+          ],
+          [
+            8.545101387085396,
+            47.36567252077583
+          ],
+          [
+            8.544770865032774,
+            47.366264686893686
+          ],
+          [
+            8.544394266445153,
+            47.36677867303274
+          ],
+          [
+            8.544195242140319,
+            47.36690865828942
+          ],
+          [
+            8.543893151677793,
+            47.36690143689461
+          ],
+          [
+            8.542407170373139,
+            47.36663740155839
+          ],
+          [
+            8.542126403942092,
+            47.36653148712506
+          ],
+          [
+            8.54216549800256,
+            47.3663726150761
+          ],
+          [
+            8.541824313479566,
+            47.366326879094856
+          ],
+          [
+            8.541717688547834,
+            47.36640631411777
+          ],
+          [
+            8.541230789801432,
+            47.3663100278566
+          ],
+          [
+            8.540843403207504,
+            47.366228184396135
+          ],
+          [
+            8.540690580973603,
+            47.366148747974705
+          ],
+          [
+            8.540388490509713,
+            47.3660404253894
+          ],
+          [
+            8.540072184024837,
+            47.36588636621792
+          ],
+          [
+            8.539848277983111,
+            47.36577563592064
+          ],
+          [
+            8.53966702370451,
+            47.36563601911487
+          ],
+          [
+            8.53910549084381,
+            47.36535437719266
+          ],
+          [
+            8.53891357454944,
+            47.36554936022179
+          ],
+          [
+            8.538824724414127,
+            47.365501216331324
+          ],
+          [
+            8.538256083714543,
+            47.36626669915012
+          ]
+        ],
+        "type": "LineString"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "St. Peter",
+        "category": "sightseeing",
+        "tags": [
+          "church"
+        ],
+        "description": "<p>St. Peter is one of the oldest churches in town, dating back to the 8th century. Reworked in several occasions, the present-day building was completed in 1706. The clock on the steeple marked for centuries the official Zurich time and is the largest church clock in Europe.</p>",
+        "links": [
+          "https://en.wikipedia.org/wiki/St._Peter,_Zürich"
+        ],
+        "recommenders": ["Rachel"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.540736008951455,
+          47.371111984382196
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Grossmünster",
+        "category": "sightseeing",
+        "tags": [
+          "church"
+        ],
+        "description": "<p>According to the legend Charlemagne himself ordered the construction of the <em>Grossmünster</em>. Construction of the present-day building started in around 1100 and was inaugurated in 1220. The towers were first erected in 1492, then restored in 1787 after a fire destroyed their wooden steeples. On the left tower, visible from the Limmat, thrones a statue of the mythological founder (a replica). The original is in the crypt of the church. Stained glass windows by Augusto Giacometti were added in 1932.</p><p>It is in <em>Grossmünster</em> that Zurich's reformer Huldrych Zwingli started preaching his ideas that ultimately led to the creation of the Reformed Church.</p> ",
+        "links": [
+          "https://en.wikipedia.org/wiki/Grossmünster",
+          "https://en.wikipedia.org/wiki/Huldrych_Zwingli"
+        ],
+        "recommenders": ["Rachel"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.54392610142807,
+          47.37009239231699
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lindenhof",
+        "category": "sightseeing",
+        "tags": [
+          "viewpoint"
+        ],
+        "description": "<p>The most famous view of Zurich. On this hill above the Limmat the Romans built a fortified citadel, which then became a castle in the Middle Ages, around which the early Zurich grew. In 1218 the castle was abandoned and derelict, its remains scavenged for building the city walls. Since then, <em>Lindenhof</em> has been used as a public park. A chronicle from 1774 reports the plantation of 52 lime trees <em>(Linden)</em>. On <em>Sechseläuten</em> all the guilds met here to have dinner.</p>",
+        "links": [
+          "https://en.wikipedia.org/wiki/Lindenhof_hill"
+        ],
+        "recommenders": ["Rachel"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.54091751152464,
+          47.37293823175372
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Rathaus",
+        "category": "sightseeing",
+        "tags": [],
+        "description": "<p>The first <em>Rathaus</em> (Town Hall) was built on this location in 1397. In 1693 the city council voted the construction of a new Town Hall, that was completed in 1698.</p>",
+        "links": [
+          "https://en.wikipedia.org/wiki/Zürich_Town_Hall"
+        ],
+        "recommenders": ["Rachel"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.5426765823143,
+          47.371529721406716
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Opernhaus",
+        "category": "sightseeing",
+        "tags": [
+          "zunfthaus"
+        ],
+        "description": "<p>At this place stood the <em>Aktientheater</em>, built in 1834, where Richard Wagner staged many of his works during his exile from Germany. When the <em>Aktientheater</em>burned down in 1890, a new theater was commissioned and completed in 1891. The opera house overlooks <em>Sechseläutenplatz</em> where every year the celebration of the <em>Sechseläutenplatz</em> culminate in the burning of the Böögg.</p>",
+        "links": [
+          "https://en.wikipedia.org/wiki/Zürich_Opera_House",
+          "https://en.wikipedia.org/wiki/Sechseläutenplatz",
+          "https://en.wikipedia.org/wiki/Sechseläuten"
+        ],
+        "recommenders": ["Rachel"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.546779223389393,
+          47.365063859856406
+        ],
+        "type": "Point"
+      }
+    }
+  ]
+}

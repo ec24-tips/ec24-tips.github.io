@@ -1007,9 +1007,10 @@
         "tags": [
           "lunch",
           "dinner",
-          "swiss"
+          "swiss",
+	  "zunfthaus"
         ],
-        "description": "Traditional restaurant by ETH/UZH. Affordable lunch menu.",
+        "description": "Traditional restaurant by ETH/UZH. Affordable lunch menu. Home of the <em>Zunft Oberstrass</em>.",
         "links": [
           "https://linde-oberstrass.ch/"
         ],
