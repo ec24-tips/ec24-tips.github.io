@@ -4,6 +4,27 @@ An interactive map with local tips for the crowd at [Eurocrypt 2024](https://eur
 
 Web-based, mobile-first, built upon [Leaflet.js](https://leafletjs.com/) and [Fuse.js](https://www.fusejs.io/). Maps tiles by [OpenStreetMap](https://www.openstreetmap.org/). Made with ❤️ by your local cryptographers.
 
+## Testing the project locally
+
+To build and run the project you need Python 3. If you also have
+`make` and `xdg-open`, you can simply type
+
+```
+make run
+```
+
+This will build the project, launch a web server and open a browser
+window.
+
+Alternatively, using only python:
+
+```
+./make.py
+python -m http.server
+```
+
+then point your browser to <http://localhost:8000>.
+
 ## Contributing
 
 Please consider adding your local tips to the map, it's easy!
@@ -21,7 +42,7 @@ The best way to add multiple markers and other features is by making a pull-requ
 | `recommenders` | | list of strings | A list of people (names, nicknames, etc.) who endorse this tip. Empty = Anonymous.
 | `links` | | list of URLs | A list of URLs related to the place.
 
-On <https://geojson.io/> you can edit the properties either by clicking on the marker or by editing the JSON directly.
+On <https://geojson.io/> you can edit the properties either by clicking on the marker or by editing the JSON directly. Careful when you edit using the visual tools in geojson.io: the interface does not understand lists well, so `tags`, `recommenders` and `links` may not be formatted properly. Double-check the JSON before submitting a PR.
 
 ### Categories and tags
 
@@ -39,6 +60,7 @@ The category of a feature determines the icon that is shown on the map. The list
 |`viewpoint`|A scenic viewpoint
 |`beach`|A lakeside beach
 |`conference`|Places where the conference takes place
+|`sport`|Gyms and other places to practice sports
 
 Any other category receives a default "question mark" icon. 
 
