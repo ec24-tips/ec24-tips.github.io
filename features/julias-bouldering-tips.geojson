@@ -1,0 +1,152 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Boulderlounge",
+        "category": "sport",
+        "tags": ["bouldering","indoor"],
+        "description": "Beginner-friendly bouldering gym only a bit outside of Zürich",
+        "links": [
+          "https://www.boulderlounge.ch/"
+        ],
+        "recommenders": ["Julia"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.452897846732782,
+          47.39899444109912
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kletterzentrum Gaswerk Schlieren",
+        "category": "sport",
+        "tags": [
+          "bouldering",
+          "climbing"
+        ],
+        "description": "Climbing gym for both bouldering and lead climbing. Very busy on weekdays, special offers on Saturday",
+        "recommenders": ["Julia"],
+        "links": ["https://www.kletterzentrum.com/standorte/schlieren/"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.461750212884255,
+          47.40266405000065
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Minimum Leutsch",
+        "description": "Bouldering Gym",
+        "links": [
+          "https://minimum.ch/bouldern/hallen/leutschenbach/"
+        ],
+        "tags": ["bouldering","indoor"],
+        "recommenders": [
+          "Julia"
+        ],
+        "category": "sport"
+      },
+      "geometry": {
+        "coordinates": [
+          8.554695173485499,
+          47.41594076177253
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Minimum Flüela",
+        "category": "sport",
+        "links": [
+          "https://minimum.ch/bouldern/hallen/flueela/"
+        ],
+        "tags": ["bouldering","indoor","crashpad rental"],
+        "description": "Bouldering Gym",
+        "recommenders": [
+          "Julia"
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          8.49534741050789,
+          47.381700013327645
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Murgtal Bouldering Location",
+        "category": "sport",
+        "links": ["https://bouldern.ch/"],
+        "tags": [
+          "bouldering",
+          "outdoor"
+        ],
+        "recommenders": [
+          "Julia"
+        ],
+        "description": "The closest outdoor bouldering location near Zürich, only one hour by train from HB. Topo is available through the bouldern.ch app. Note that the village pub \"Murg City\" closed and crashpad rental on-site (as recommended by the bouldern.ch app) may therefore no longer be possible. Crashpads can be rented in Zürich, e.g. at Ruedi Bergsport or Minimum Flüela."
+      },
+      "geometry": {
+        "coordinates": [
+          9.213792813663929,
+          47.105578557387645
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Magic Wood",
+        "tags": [
+          "bouldering",
+          "outdoor"
+        ],
+        "category": "sport",
+        "description": "Switzerland's most popular outdoor bouldering location. Crashpad and shoe rental at the Edelweiss Restaurant in the village.",
+        "links": ["https://www.bodhi.ch/"],
+        "recommenders": ["Julia"]
+      },
+      "geometry": {
+        "coordinates": [
+          9.437064245998954,
+          46.565330565056314
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ruedi Bergsport",
+        "category": "sport",
+        "tags": ["crasphad rental", "rental", "shopping"],
+        "description": "Rental place for mountain sports equipment.",
+        "links": ["https://www.ruedi-bergsport.ch/"],
+        "recommenders": ["Julia"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.525257890889947,
+          47.37145691366905
+        ],
+        "type": "Point"
+      }
+    }
+  ]
+}
