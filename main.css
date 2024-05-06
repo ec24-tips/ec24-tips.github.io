@@ -43,6 +43,7 @@ html, body, #main {
 .icon.cat-conference::before { content: "\e80c"; }
 .icon.cat-shopping::before { content: "\f1cc"; }
 .icon.cat-beach::before { content: "\eb3e"; }
+.icon.cat-sport::before { content: "\e566"; }
 
 .cat-restaurant, .cat-bar, .cat-café, .cat-bakery {
     --base-color: #55f;
@@ -52,11 +53,15 @@ html, body, #main {
     --base-color: #f55;
     --active-color: #f00;
 }
-.cat-hike, .cat-viewpoint, .cat-beach {
+.cat-viewpoint, .cat-beach {
     --base-color: #ff8f00;
     --active-color: #cb7200;
 }
-.icon.cat-conference {
+.cat-sport, .cat-hike {
+    --base-color: #5a5;
+    --active-color: #0a0;
+}
+.cat-conference {
     --base-color: #555;
     --active-color: #000;
 }
