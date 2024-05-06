@@ -24,6 +24,18 @@ def validate(node, uids, filename):
         for field in ['name', 'description', 'category', 'tags']:
             if field not in props:
                 raise ValueError(f'{filename}: Missing property `{field}` in GeoJSON object')
+        if type(props['name']) != str:
+            raise ValueError(f'{filename}: `name` must be a string')
+        if type(props['description']) != str:
+            raise ValueError(f'{filename}: `description` must be a string')
+        if type(props['category']) != str:
+            raise ValueError(f'{filename}: `category` must be a string')
+        if type(props['tags']) != list:
+            raise ValueError(f'{filename}: `tags` must be a list')
+        if type(props.get('links', [])) != list:
+            raise ValueError(f'{filename}: `links` must be a list')
+        if type(props.get('recommenders', [])) != list:
+            raise ValueError(f'{filename}: `recommenders` must be a list')
         if 'id' in node and node['id']:
             uid = node['id']
             if uid in uids:
