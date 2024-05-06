@@ -30,7 +30,7 @@ html, body, #main {
     height: 100dvh;
 }
 
-/* Category icons */
+/* Category icons and colors */
 
 .icon::before { content: "\eb8b"; }
 .icon.cat-restaurant::before { content: "\e56c"; }
@@ -44,32 +44,50 @@ html, body, #main {
 .icon.cat-shopping::before { content: "\f1cc"; }
 .icon.cat-beach::before { content: "\eb3e"; }
 
+.cat-restaurant, .cat-bar, .cat-café, .cat-bakery {
+    --base-color: #55f;
+    --active-color: #00f;
+}
+.cat-shopping, .cat-sightseeing {
+    --base-color: #f55;
+    --active-color: #f00;
+}
+.cat-hike, .cat-viewpoint, .cat-beach {
+    --base-color: #ff8f00;
+    --active-color: #cb7200;
+}
+.icon.cat-conference {
+    --base-color: #555;
+    --active-color: #000;
+}
+
+
+
 
 /* Map markers */
 
 .leaflet-marker-icon {
     font-variation-settings: 'FILL' 0, 'wght' 200;
-    color: #55f;
-    text-shadow: 0 0 5px #55f;
+    color: var(--base-color);
+    text-shadow: 0 0 5px currentcolor;
     background-color: #fff9;
     border-radius: 14px;
-    border: solid thin #55f5;
+    border: solid thin currentcolor;
     padding: 2px;
 }
 .leaflet-marker-icon.active {
+    color: var(--active-color);
     font-variation-settings: 'FILL' 0, 'wght' 600;
-    color: #00f;
     background-color: #fffe;
-    border: solid thin #00f;
     z-index: 1000!important;
 }
 
 path {
-    stroke: #55f;
+    stroke: var(--base-color);
     stroke-width: 6;
 }
 path.active {
-    stroke: #00f;
+    stroke: var(--active-color);
 }
 
 .hidden {

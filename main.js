@@ -52,6 +52,16 @@ class Interactor {
 	    : undefined;
     }
     
+    #length() {
+	let len = 0;
+	let prev = this.#layer.getLatLngs()[0];
+	for (let fix of this.#layer.getLatLngs()) {
+	    len += prev.distanceTo(fix);
+	    prev = fix;
+	}
+	return len;
+    }
+
     activate() {
 	this.active = true;
 	this.#node.classList.add('active');
@@ -288,8 +298,12 @@ const app = new class {
 	
 	L.geoJSON(features, {
 	    pointToLayer: (point, latlng) => this.addMarker(latlng, point),
-	    onEachFeature: (feature, layer) => (feature.geometry.type != "Point"
-						&& this.awaken(layer)),
+	    onEachFeature: (feature, layer) => {
+		if (feature.geometry.type != "Point") {
+		    layer.options.className = `cat-${feature.properties.category}`;
+		    this.awaken(layer);
+		}
+	    },
 	}).addTo(this.map);
     }
     
