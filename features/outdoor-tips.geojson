@@ -1,0 +1,160 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Loorenkopf Tower",
+        "category": "viewpoint",
+        "tags": [
+          "view",
+          "mountain",
+          "hike"
+        ],
+        "description": "A wooden tower with a nice view from the top. You can take a walk to/from here from the top station of the Dolderbahn funicular or the Zoo tram stop (both included in zone 110).",
+        "recommenders": [
+          "Julia"
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          8.598966015819741,
+          47.369755811558434
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Käferberg viewpoint",
+        "category": "viewpoint",
+        "tags": [
+          "viewpoint"
+        ],
+        "description": "Enjoy a nice view over the city of Zürich. When the weather is good you can also see the Alps in the distance.",
+        "recommenders": [
+          "Julia"
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          8.52968647377324,
+          47.39866917759298
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Beavers!",
+        "category": "sightseeing",
+        "tags": [
+          "beavers",
+          "animals",
+          "night"
+        ],
+        "description": "In this little stream in Oerlikon resides a family of beavers. They are cute and chonky and usually come out when it is dark, but can also be spotted in the evening or early morning. Come here if you still need a picture of a \"Beaver Triple\" for your talk ;)",
+        "recommenders": [
+          "Julia"
+        ],
+        "links": [
+          "https://zuerich.stadtwildtiere.ch/artportraet/biber"
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            8.551015910113222,
+            47.41306127292174
+          ],
+          [
+            8.558581632457901,
+            47.41308636990553
+          ],
+          [
+            8.558767066828779,
+            47.4144541374489
+          ],
+          [
+            8.557932612159163,
+            47.41734013587927
+          ],
+          [
+            8.561159170217735,
+            47.41808043172446
+          ]
+        ],
+        "type": "LineString"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Streetworkout station",
+        "category": "sport",
+        "tags": [
+          "calisthenics",
+          "gym",
+          "outdoor",
+          "bouldering"
+        ],
+        "description": "An outdoor training place with various bars. Also there is a small bouldering wall next to it.",
+        "recommenders": [
+          "Julia"
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          8.545788889603358,
+          47.39877391443761
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Elefant Statue",
+        "category": "hike",
+        "description": "Here, an easy hike can be done along the stream passing by the elefant statue. For example, you can walk from Burgwies tram stop along hte stream to the elefant.",
+        "tags": [
+          "hike",
+          "forest",
+          "stream"
+        ],
+        "recommenders": [
+          "Julia"
+        ],
+        "links": [
+          "https://wegwandern.ch/wanderung/wanderung-zuerich-burgwies-elefantenbach-stoeckentobel-werenbachtobel-wandern/"
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          8.58560786290721,
+          47.36258662157931
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+      "name": "Wildlife Park",
+      "category": "sightseeing",
+      "tags": ["animals","forest","hike", "outdoor"],
+      "description": "Meet the wildlife of Switzerland in this park with big natural enclosures - you can see a variety of animals ranging from the tiny mice in the \"Müsli Hüsli\" to the big brown bears.",
+      "recommenders": ["Julia"],
+      "links": ["https://www.wildnispark.ch/en/the-park/langenberg-wildlife-park"]},
+      "geometry": {
+        "coordinates": [
+          8.529223978631364,
+          47.29320775065696
+        ],
+        "type": "Point"
+      }
+    }
+  ]
+}
