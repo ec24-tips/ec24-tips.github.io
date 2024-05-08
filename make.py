@@ -32,10 +32,16 @@ def validate(node, uids, filename):
             raise ValueError(f'{filename}: `category` must be a string')
         if type(props['tags']) != list:
             raise ValueError(f'{filename}: `tags` must be a list')
-        if type(props.get('links', [])) != list:
-            raise ValueError(f'{filename}: `links` must be a list')
-        if type(props.get('recommenders', [])) != list:
-            raise ValueError(f'{filename}: `recommenders` must be a list')
+        if 'links' in props:
+            if type(props['links']) != list:
+                raise ValueError(f'{filename}: `links` must be a list')
+            if not props['links']:
+                props.pop('links')
+        if 'recommenders' in props:
+            if type(props['recommenders']) != list:
+                raise ValueError(f'{filename}: `recommenders` must be a list')
+            if not props['recommenders']:
+                props.pop('recommenders')
         if 'id' in node and node['id']:
             uid = node['id']
             if uid in uids:
