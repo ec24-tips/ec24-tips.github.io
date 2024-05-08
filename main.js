@@ -123,7 +123,7 @@ class Interactor {
 	if (this.props.links)
 	    this.#card.innerHTML += `
 <ul class="links">
-  ${ this.props.links.map((l) => e`<li><a target="_blank" href="${l}"><span class="material-symbols-outlined">&#xe157;</span>${l}</a></li>`).join('') }
+  ${ this.props.links.map((l) => e`<li><a target="_blank" href="${l}"><span class="material-symbols-outlined">&#xe157;</span>${decodeURIComponent(l)}</a></li>`).join('') }
 </ul>`;
 
 	let geo;
