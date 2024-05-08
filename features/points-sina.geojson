@@ -28,7 +28,7 @@
             "park",
             "seebad"
           ],
-          "description": "</p>A very calm place to swim in the lake: A tiny park, large stones on which to sit and usually not too many people around. The park is however not always as clean as the rest of the city, and there is no real beach (you get into half a meter of water directly from 30cm above the water). Be careful to not get too close to the ports which are at both sides of the park. <p/></p>This is not an official beach, so there is no surveillance, no changing room, and generally no infrastructure for swimming. There is also no entrance fee.<p/>",
+          "description": "<p>A very calm place to swim in the lake: A tiny park, large stones on which to sit and usually not too many people around. The park is however not always as clean as the rest of the city, and there is no real beach (you get into half a meter of water directly from 30cm above the water). Be careful to not get too close to the ports which are at both sides of the park. </p><p>This is not an official beach, so there is no surveillance, no changing room, and generally no infrastructure for swimming. There is also no entrance fee.</p>",
           "recommenders": [
             "Sina"
           ]
@@ -37,30 +37,6 @@
           "coordinates": [
             8.56128,
             47.34909
-          ],
-          "type": "Point"
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "name": "Loorenchopf",
-          "category": "viewpoint",
-          "tags": [
-            "hike"
-          ],
-          "description": "</p>The highest viewpoint around Zürich on this side of the lake. A wooden tower allows to climb above the trees and to enjoy a view until the alps.<p/></p>The only way to get there is by walking from one of the Tramway stations, such as Burgwies or from the zoo, which makes for a short hike of about 10km, with a change of altitude of about 250m and takes about 3h (including the way back). If you get lost, go down the hill: As it is encircled by Zürich and neighboring towns, this will help finding mean of transportation back to the city.<p/>",
-          "links": [
-            "https://www.zuerich.com/en/visit/sport/trail-loorenkopf"
-          ],
-          "recommenders": [
-            "Sina"
-          ]
-        },
-        "geometry": {
-          "coordinates": [
-            8.5994,
-            47.36976
           ],
           "type": "Point"
         }
@@ -77,7 +53,7 @@
           "links": [
             "https://www.landesmuseum.ch/en"
           ],
-          "recommenders": ["Sina"]
+          "recommenders": ["Sina","Luca"]
         },
         "geometry": {
           "coordinates": [
