@@ -1,0 +1,98 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+	{
+	    "type": "Feature",
+	    "properties": {
+		"name": "Victorinox flagship store",
+		"category": "shopping",
+		"tags": ["souvenirs"],
+		"links": [
+		    "https://www.victorinox.com/en-CH/Victorinox-Flagship-Store-Z%C3%BCrich/cms/flagship-store-zurich/"
+		],
+		"recommenders": ["Rachel"],
+		"description": "You can also find knives in a lot of stores and at the airport, but here is the complete collection (also a few other items). Have your name engraved for 5 more francs and a few minutes of waiting."
+	    },
+	    "geometry": {
+		"coordinates": [
+		    8.53895332444344,
+		    47.37402502612906
+		],
+		"type": "Point"
+	    }
+	},
+	{
+	    "type": "Feature",
+	    "properties": {
+		"name": "Orell Füssli",
+		"category": "shopping",
+		"tags": ["bookstore"],
+		"links": ["https://www.orellfuessli.ch"],
+		"recommenders": ["Rachel"],
+		"description": "Big library. Mostly in German, but the 3rd floor is dedicated to English books."
+	    },
+	    "geometry": {
+		"coordinates": [
+		    8.53764351931332,
+		    47.37323892030946
+		],
+		"type": "Point"
+	    }
+	},
+	{
+	    "type": "Feature",
+	    "properties": {
+		"name": "Schweizer Heimatwerk",
+		"category": "shopping",
+		"tags": ["souvenirs"],
+		"links": ["https://www.heimatwerk.ch/"],
+		"recommenders": ["Rachel"],
+		"description": "Things made in Switzerland. Quite expensive but you'll maybe leave with a small handmade wooden cow crafted by Trauffer, century-old Swiss toymaker."
+	    },
+	    "geometry": {
+		"coordinates": [
+		    8.541695862653938,
+		    47.37429319894471
+		],
+		"type": "Point"
+	    }
+	},
+	{
+	    "type": "Feature",
+	    "properties": {
+		"name": "Berg und Tal",
+		"category": "shopping",
+		"tags": ["food"],
+		"links": ["https://www.berg-tal.ch/"],
+		"recommenders": ["Rachel"],
+		"description": "Local specialties, mostly from the Zurich region (a few products from other cantons): wine and schnapps, dried sausages and a small selection of local cheeses, Alp salt and <em>Tsüri sauce</em>, biscuits, chocolate bars from Zürcher manufacturers that you won't find elsewhere (Tsüri Schoggi, Taucherli). Also a few postcards."
+	    },
+	    "geometry": {
+		"coordinates": [
+		    8.54368103839866,
+		    47.372788517003386
+		],
+		"type": "Point"
+	    }
+	},
+	{
+	    "type": "Feature",
+	    "properties": {
+		"name": "Marc Döhring",
+		"category": "bakery",
+		"tags": ["food", "shopping", "breakfast"],
+		"links": ["https://www.der-zuckerbaecker.ch/"],
+		"recommenders": ["Rachel"],
+		"description": "Microscopic bakery that sells a few cakes and also Schweizer Guetzli (Swiss traditionnal cookies). The selection is a bit smaller outside of Christmas time."
+	    },
+	    "geometry": {
+		"coordinates": [
+		    8.541062361525775,
+		    47.370840033848594
+		],
+		"type": "Point"
+	    },
+	    "id": 4
+	}
+    ]
+}
