@@ -4,7 +4,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Tonhalle",
+        "name": "Kongresshaus/Tonhalle",
 	"category": "conference",
 	"tags": [],
 	"description": "The main venue of Eurocrypt 2024.",
