@@ -196,8 +196,117 @@ class LayerCollection extends Map {
     }
 }
 
+class Geolocalization extends L.Control {
+    static
+    states = {
+	'I': { name: 'inactive', desc: 'Show my location', },
+	'S': { name: 'searching', desc: 'Waiting for location', },
+	'A': { name: 'active', desc: 'Geolocating', },
+	'T': { name: 'tracking', desc: 'Geolocating', },
+	'F': { name: 'failed', desc: 'Cannot get location', },
+    }
+
+    #state = 'I';
+
+    constructor(opts){
+	super(opts);
+    }
+
+    get state() {
+	return Geolocalization.states[this.#state];
+    }
+
+    advanceState() {
+	if (this.#state === 'I' || this.#state === 'F')
+	    this._map.locate({ 
+		watch: true,
+		enableHighAccuracy: true,
+	    });
+	if (this.#state === 'A')
+	    this.panToLocation();
+	this.#state = { 
+	    'I': 'S',
+	    'S': 'S',
+	    'A': 'T',
+	    'T': 'T',
+	    'F': 'S',
+	}[this.#state];
+    }
+    
+    icon() {
+	return `
+<a class="material-symbols-outlined ${this.state.name}" role="button"
+   title="${this.state.desc}" aria-label="${this.state.desc}"
+   aria-disabled="false">
+</a>`;
+    }
+
+    onAdd(map){
+	this.button = document.createElement('div');
+	this.button.id = 'locate-button';
+	this.button.className = 'leaflet-bar';
+	this.button.innerHTML = this.icon();
+	this.button.addEventListener('click', (e) => {
+	    this.geoLocalizeChange(e);
+	    e.stopPropagation();
+	});
+	this._map.createPane('position');
+	this.position = L.circleMarker ([ 0, 0 ], {
+	    radius: 10,
+	    fill: 'true',
+	    fillOpacity: 0.9,
+	    className: 'location',
+	    pane: 'position',
+	});
+	this._map.on('locationfound', this.onLocation, this);
+	this._map.on('locationerror', this.onError, this);
+	this._map.on('move', this.onMove, this);
+	return this.button;
+    }
+    
+    geoLocalizeChange(e) {
+	this.advanceState();
+	this.button.innerHTML = this.icon();
+    }
+    
+    onLocation(e) {
+	this.position.setLatLng(e.latlng);
+	this.position.addTo(this._map);
+	if (this.#state !== 'A' && this.#state !== 'T') {
+	    this.#state = 'T';
+	    this.button.innerHTML = this.icon();
+	}
+	if (this.#state === 'T')
+	    this.panToLocation();
+    }
+
+    onError(e) {
+	// In case of timeout, keep trying
+	if (e.code !== 3) {
+	    this.#state = 'F';
+	    this._map.stopLocate();
+	    this.position.remove();
+	    this.button.innerHTML = this.icon();
+	}
+	console.log("Location error", e);
+    }
+
+    onMove(e) {
+	// Only cancel tracking on map drag
+	if (e.originalEvent && this.#state === 'T') {
+	    this.#state = 'A';
+	    this.button.innerHTML = this.icon();
+	}
+    }
+
+    panToLocation() {
+	this._map.panTo(this.position.getLatLng())
+    }
+}
+
 const app = new class {
     #layers = new LayerCollection();
+    #localization = new Geolocalization({ position: "topleft" });
     #state = {
 	pane_open: false,
 	activeLayer: null,
@@ -279,6 +388,7 @@ const app = new class {
 	this.map.on('click', (e) => this.close());
 	this.DOM.container.addEventListener('transitionend',
 					(e) => this.map.invalidateSize());
+	this.#localization.addTo(this.map);
     }
 
     activateSearch() {
@@ -398,52 +508,3 @@ const app = new class {
 	this.#layers.tag(tag).forEach((m) => m.show());	
     }
 }(document.querySelector('#main'), "features.json");
-
-
-/* Geolocation */
-/*
-let mypos;
-const posicon = L.icon({
-    iconUrl: 'loc.webp',
-    iconSize: [20, 20],
-    iconAnchor: [10, 10],
-});
-let locateBtn = L.easyButton({
-    states: [{
-	stateName: 'inactive',
-	icon: '<span>⨂</span>',
-	onClick: (btn, map) => {
-	    map.locate({
-		watch: true,
-		enableHighAccuracy: true,
-	    });
-	    btn.state('searching');
-	},
-    }, {
-	stateName: 'searching',
-	icon: '<span>C</span>',
-    }, {
-	stateName: 'active',
-	icon: '<span>⨁</span>',
-	onClick: (btn, map) => {
-	    map.stopLocate();
-	    if (mypos)
-		mypos.remove();
-	    btn.state('inactive');
-	},
-    }]
-}).addTo(map);
-
-map.on('locationfound', (e) => {
-    if (mypos)
-	mypos.remove();
-    mypos = L.marker(e.latlng, { icon: posicon }).addTo(map);
-    locateBtn.state('active');
-});
-map.on('locationerror', (e) => {
-    if (mypos)
-	mypos.remove();
-    locateBtn.state('inactive');
-    console.log('Location error:', e);
-});
-*/
