@@ -76,6 +76,13 @@ html, body, #main {
     --active-color: #102a83;
 }
 
+/* Own location marker */
+.icon.location::before { content: "\e55c"; }
+.location {
+    --base-color: #000;
+    --active-color: #000;
+}
+
 
 
 

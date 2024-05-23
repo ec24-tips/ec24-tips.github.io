@@ -196,8 +196,75 @@ class LayerCollection extends Map {
     }
 }
 
+class Geolocalization extends  L.Control {
+
+	constructor(opts){
+		super(opts);
+		this.options.localizationIcon = null;
+		this.options.activate = 0;
+	}
+
+    onAdd(map){
+		this.button = L.DomUtil.create('div', 'locate-button');
+		this.button.innerHTML = '<span>Start geolocalization</span>';
+
+		this.button.setAttribute('role', 'button');
+		this.button.setAttribute('aria-label', "Geolocalization control");
+
+		L.DomEvent.disableClickPropagation(this.button);
+		L.DomEvent.on(this.button, "click", this.geoLocalizeChange, this);
+		return this.button;
+    }
+
+	geoLocalizeChange(e){
+		L.DomEvent.stopPropagation(e);
+		if(this.options.active===1) {
+			this.options.active = 0;
+			this.removeLocate();
+			this._map.stopLocate();
+			this.button.innerHTML = '<span>Start geolocalization</span>';
+			return;
+		} else {
+			this.options.active = 1;
+			this.button.innerHTML = '<span>Searching...</span>';
+			this._map.on("locationfound", this.onLocationFound, this);
+			this._map.on("locationerror", this.onLocationError, this);
+			this._map.locate({ setView: true, enableHighAccuracy: true });
+		}
+	}
+
+	onLocationFound(e){
+		if(this.options.localizationIcon)
+			this.options.localizationIcon.remove();
+		this.options.localizationIcon = this.addLocation(e).addTo(this._map);
+		this.button.innerHTML = '<span>Stop geolocalization</span>';
+	}
+
+	onLocationError(e){
+		this.button.innerHTML = '<span>Geolocalization permission denied</span>';
+		console.log("Location denied");
+	}
+
+	addLocation({ latitude, longitude }) {
+		return L.marker ([ latitude, longitude ],{
+			icon:  L.divIcon({
+			className: `material-symbols-outlined icon location`,
+			iconSize: '40px',
+			iconAnchor: [20, 20],
+			})
+		});
+	}
+
+    removeLocate(){
+		this._map.stopLocate();
+		if(this.options.localizationIcon)
+		    this.options.localizationIcon.remove();
+    }
+}
+
 const app = new class {
     #layers = new LayerCollection();
+	#localization = new Geolocalization({position: "topright"});
     #state = {
 	pane_open: false,
 	activeLayer: null,
@@ -279,6 +346,7 @@ const app = new class {
 	this.map.on('click', (e) => this.close());
 	this.DOM.container.addEventListener('transitionend',
 					(e) => this.map.invalidateSize());
+	this.#localization.addTo(this.map);
     }
 
     activateSearch() {
@@ -398,52 +466,3 @@ const app = new class {
 	this.#layers.tag(tag).forEach((m) => m.show());	
     }
 }(document.querySelector('#main'), "features.json");
-
-
-/* Geolocation */
-/*
-let mypos;
-const posicon = L.icon({
-    iconUrl: 'loc.webp',
-    iconSize: [20, 20],
-    iconAnchor: [10, 10],
-});
-let locateBtn = L.easyButton({
-    states: [{
-	stateName: 'inactive',
-	icon: '<span>⨂</span>',
-	onClick: (btn, map) => {
-	    map.locate({
-		watch: true,
-		enableHighAccuracy: true,
-	    });
-	    btn.state('searching');
-	},
-    }, {
-	stateName: 'searching',
-	icon: '<span>C</span>',
-    }, {
-	stateName: 'active',
-	icon: '<span>⨁</span>',
-	onClick: (btn, map) => {
-	    map.stopLocate();
-	    if (mypos)
-		mypos.remove();
-	    btn.state('inactive');
-	},
-    }]
-}).addTo(map);
-
-map.on('locationfound', (e) => {
-    if (mypos)
-	mypos.remove();
-    mypos = L.marker(e.latlng, { icon: posicon }).addTo(map);
-    locateBtn.state('active');
-});
-map.on('locationerror', (e) => {
-    if (mypos)
-	mypos.remove();
-    locateBtn.state('inactive');
-    console.log('Location error:', e);
-});
-*/
