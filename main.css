@@ -30,6 +30,29 @@ html, body, #main {
     height: 100dvh;
 }
 
+/* Map controls */
+#locate-button {
+    cursor: pointer;
+    font-variation-settings: 'FILL' 1, 'wght' 200;
+}
+#locate-button a.inactive:before { content: '\e55c'; }
+#locate-button a.searching::before { 
+    content: '\e1b7'; 
+    animation: searching 2s infinite linear; 
+}
+#locate-button a.active::before, #locate-button a.tracking::before
+{ content: '\e55c'; color: blue; }
+#locate-button a.failed::before { content: '\e1b6'; color: gray; }
+
+@keyframes searching {
+    from { content: '\e1b7'; }
+    to   { content: '\e55c'; }
+}
+
+.leaflet-pane.leaflet-position-pane {
+    z-index: 1100;
+}
+
 /* Category icons and colors */
 
 .icon::before { content: "\eb8b"; }
@@ -75,15 +98,6 @@ html, body, #main {
     --base-color: #4c5fa2;
     --active-color: #102a83;
 }
-
-/* Own location marker */
-.icon.location::before { content: "\e55c"; }
-.location {
-    --base-color: #000;
-    --active-color: #000;
-}
-
-
 
 
 /* Map markers */
