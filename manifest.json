@@ -5,5 +5,9 @@
     "background_color": "#fff",
     "start_url": ".",
     "icons": [
+	{
+	    "src": "assets/iacrlogo_small.png",
+	    "sizes": "500x500",
+	}
     ]
 }
