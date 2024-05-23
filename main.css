@@ -40,10 +40,20 @@ html, body, #main {
 .icon.cat-hike::before { content: "\e50a"; }
 .icon.cat-sightseeing::before { content: "\e84f"; }
 .icon.cat-viewpoint::before { content: "\e3f7"; }
-.icon.cat-conference::before { content: "\e80c"; }
 .icon.cat-shopping::before { content: "\f1cc"; }
 .icon.cat-beach::before { content: "\eb3e"; }
 .icon.cat-sport::before { content: "\e566"; }
+.icon.cat-conference::before { content: "";  }
+.icon.cat-conference {
+    background: url("assets/iacrlogo_small.png");
+    background-size: 28px;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 28px; 
+    width: 28px;
+    border: none;
+    padding: 0;
+}
 
 .cat-restaurant, .cat-bar, .cat-café, .cat-bakery {
     --base-color: #55f;
@@ -62,8 +72,8 @@ html, body, #main {
     --active-color: #0a0;
 }
 .cat-conference {
-    --base-color: #555;
-    --active-color: #000;
+    --base-color: #4c5fa2;
+    --active-color: #102a83;
 }
 
 
@@ -85,6 +95,9 @@ html, body, #main {
     font-variation-settings: 'FILL' 0, 'wght' 600;
     background-color: #fffe;
     z-index: 1000!important;
+}
+.leaflet-marker-icon.cat-conference:not(.active) {
+    opacity: 0.8;
 }
 
 path {
