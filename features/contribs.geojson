@@ -1,0 +1,22 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+	{
+	    "type": "Feature",
+	    "properties": {
+		"name": "Style Thai",
+		"category": "restaurant",
+		"tags": ["lunch", "dinner", "thai", "asian"],
+		"recommenders": ["Gareth"],
+		"description": "Both eat in or takeaway. Outdoor seats + good food. I had lunch there but I think there's dinner too. Comparatively cheap in Zurich (< 20CHF), great portion size, with outdoor seats and nice staff."
+	    },
+	    "geometry": {
+		"coordinates": [
+		    8.5433622,
+		    47.3710755 
+		],
+		"type": "Point"
+	    }
+	}
+    ]
+}
