@@ -54,6 +54,44 @@
         ],
         "type": "Point"
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Public grill Chinagarten",
+        "category": "restaurant",
+        "tags": ["lunch", "dinner", "vegetarian", "grill", "vegan"],
+        "description": "Your meal will not get cheaper than this: go to <a href='#migros-restaurant_2'>Migros</a> or <a href='#coop-restaurant'>Coop</a>, buy some sausages and vegetables and grill them on this free gas-powered grill. By nice weather, it gets <strong>very</strong> busy on weekends&hellip;",
+	"recommenders": ["Luca"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.550646120247393,
+          47.35384900525176
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Chinagarten",
+        "category": "sightseeing",
+        "tags": ["park"],
+        "description": "Donated by Zürich's sister town Kunming (Yunnan province), an authentic Chinese garden in the heart of Zürich. Free entry.",
+	"links": [
+	  "https://stadt-zuerich.ch/chinagarten",
+	  "https://en.wikipedia.org/wiki/Chinese_Garden%2C_Z%C3%BCrich"
+	],
+	"recommenders": ["Luca"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.551787477048833,
+          47.35482357868662
+        ],
+        "type": "Point"
+      }
     }
   ]
 }
