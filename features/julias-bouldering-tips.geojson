@@ -135,7 +135,7 @@
       "properties": {
         "name": "Ruedi Bergsport",
         "category": "sport",
-        "tags": ["crasphad rental", "rental", "shopping"],
+        "tags": ["crashpad rental", "rental", "shopping"],
         "description": "Rental place for mountain sports equipment.",
         "links": ["https://www.ruedi-bergsport.ch/"],
         "recommenders": ["Julia"]
