@@ -15,6 +15,10 @@ ul li {
 }
 
 /* Page layout */
+:root {
+    --transition-duration: 0.5s;
+    --transition-type: ease-out;
+}
 
 html, body, #main {
     height: 100dvh;
@@ -23,7 +27,7 @@ html, body, #main {
 }
 
 #map, #pane {
-    transition: height 0.5s ease-out;
+    transition: height var(--transition-duration) var(--transition-type);
 }
 
 #map {
@@ -31,7 +35,7 @@ html, body, #main {
 }
 
 /* Map controls */
-#locate-button {
+#locate-button, #burger {
     cursor: pointer;
     font-variation-settings: 'FILL' 1, 'wght' 200;
 }
@@ -129,11 +133,19 @@ path.active {
     stroke: var(--active-color);
 }
 
-.hidden {
+.leaflet-marker-icon.hidden, path.hidden {
     display: none;
 }
 
-/* The info pane */
+
+/* The info pane and its button */
+#burger span {
+    display: block;
+    transition: transform var(--transition-duration) var(--transition-type);
+}
+#main.open #burger span {
+    transform: rotate(90deg);
+}
 
 #pane {
     height: 0dvh;
@@ -146,48 +158,111 @@ path.active {
     max-width: 600px;
     padding: 4px;
     margin: auto;
-    position: relative;
-}
-
-#share-button {
-    position: absolute;
-    right: 0;
-    cursor: pointer;
-    display: none;
-}
-#share-button.supported {
-    display: block;
 }
 
 #main.open #map, #main.open #pane {
     height: 50dvh;
 }
 
-#main:not(.layer-view) #result,
-#main.layer-view #list {
+#main:not(.list-view) .show-on-list,
+#main.list-view .show-on-result {
     display: none;
 }
 
-/* Location card */
+/* Common layout for list and cards */
 
-.card .icon {
+#pane-header {
+    display: flex;
+    flex-flow: row nowrap;
+}
+#share-button.supported, #back-button {
+    cursor: pointer;
+    flex: 0 0 30px;
+    display: flex;
+    align-items: center;
+}
+#share-button:hover, #back-button:hover {
+    text-shadow: 0 0 2px gray;
+}
+#share-button {
+    border-left: solid gray thin;
+    text-align: right;
+    display: none;
+}
+#back-button {
+    border-right: solid gray thin;
+    text-align: left;
+}
+
+#pane-control {
+    flex: 1;
+    padding: 0 6px;
+}
+
+#pane-content .icon {
     vertical-align: text-top;
     padding-right: 12px;
 }
 
-.card .tags {
+#pane-content .tags, #tags {
     margin-left: 36px;
 }
-.card .tags li {
+
+.tags > *, #tags > * {
     display: inline-block;
+    margin-right: 1ex;
 }
-.card .tags button {
-    background-color: transparent;
-    border: none;
-    margin: 0 4px;
-    /*cursor: pointer;*/
+
+#alltags {
+    max-height: 3.5em;
+    overflow-y: scroll;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+#alltags .tag {
+    display: block;
+    font-size: 80%;
+    border-radius: 1ex;
+    padding: 1px 4px;
+    margin: 2px;
+    cursor: pointer;
+    color: #00f;
+    background-color: #eef;
+}
+#alltags .tag:hover {
+    background-color: #ddf;
+    text-decoration: line-through;
+}
+#alltags .tag.inactive {
+    color: gray;
+    order: 1;
+    text-decoration: line-through;
+}
+#alltags .tag.inactive:hover {
+    text-decoration: none;
+}
+
+/* List */
+
+.thumbnail {
+    display: block;
+    color: inherit;
+    padding: 10px 0;
+    border-bottom: solid thin gray;
+}
+.thumbnail:hover {
+    text-decoration: none;
+    outline: solid thin gray;
+}
+.thumbnail.hidden {
+    display: none;
+}
+.thumbnail .tags {
     color: #555;
 }
+
+/* Cards */
 
 .description, .recommended-by, .links, .geo-link {
     margin-bottom: 1ex;
