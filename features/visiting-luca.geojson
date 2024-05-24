@@ -18,6 +18,42 @@
         ],
         "type": "Point"
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Museum Rietberg / Rieterpark",
+        "category": "sightseeing",
+        "tags": ["museum","park","viewpoint"],
+        "description": "<p>The Wesendonck Villa, built for the rich merchant Otto Wesendonck, hosts today the Rietberg Museum, the finest collection of Asian, African, American and Oceanian art in Switzerland. Until July 2024, it hosts a temporary exhibition on Columbian gold artifacts.</p><p>An extension to the collection is hosted in the nearby Villa Schönberg, where Richard Wagner, host of the Wesendonck family, famously composed <em>Tristan und Isolde</em> (and famously took an excessive interest in his host, ultimately wrecking his own marriage).</p><p>Besides the museum, the Rieterpark, together with the connected Belvoirpark, is a quieter option for a stroll than the busier <a href='#mythenquai'>Mythenquai</a>.</p>",
+        "links": ["https://rietberg.ch/","https://en.wikipedia.org/wiki/Rietberg_Museum"],
+	"recommenders": ["Luca"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.530046679976778,
+          47.35886367984543
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sukkulenten-Sammlung",
+        "category": "sightseeing",
+        "tags": ["museum"],
+        "description": "A small curiosity within walking distance of the conference center: a collection of cactuses and succulents from all over the world, including an extensive collection of alpine succulents. Free entry.",
+        "links": ["https://www.stadt-zuerich.ch/sukkulenten"],
+	"recommenders": ["Luca"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.535291381328818,
+          47.35631888037935
+        ],
+        "type": "Point"
+      }
     }
   ]
 }
