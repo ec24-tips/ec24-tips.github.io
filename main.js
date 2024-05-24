@@ -574,14 +574,14 @@ const app = new class extends L.Control {
 	    } else {
 		this.DOM.container.classList.add('list-view');
 		this.DOM.alltags.replaceChildren();
+		const nofilter = this.#state.activeTags.length == 0;
 		for (const t of this.#layers.tags()) {
-		    const cls = this.#state.activeTags.length == 0
-			  || this.#state.activeTags.includes(t)
-			  ? '' 
-			  : 'inactive';
+		    const cls = nofilter || this.#state.activeTags.includes(t) ? '' : 'inactive';
 		    this.DOM.alltags.innerHTML += `
 <span data-tag="${t}" class="tag ${cls}">#${t}</span>`;
 		}
+		console.log(nofilter);
+		this.DOM.alltags.classList.toggle('all', nofilter);
 	    }
 	}
     }

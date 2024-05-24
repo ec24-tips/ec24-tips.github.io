@@ -232,6 +232,8 @@ path.active {
 }
 #alltags .tag:hover {
     background-color: #ddf;
+}
+#alltags:not(.all) .tag:hover {
     text-decoration: line-through;
 }
 #alltags .tag.inactive {
