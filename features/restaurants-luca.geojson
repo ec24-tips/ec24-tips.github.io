@@ -1176,6 +1176,24 @@
         ],
         "type": "Point"
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Miró Manufactura de Café",
+        "category": "bar",
+        "tags": ["breakfast","tea time"],
+        "description": "Local coffee roastery serving specialty coffees.",
+        "links": ["https://mirocoffee.co/"],
+        "recommenders": ["Luca"]
+      },
+      "geometry": {
+        "coordinates": [
+          8.525713099773157,
+          47.378587647606935
+        ],
+        "type": "Point"
+      }
     }
   ]
 }
