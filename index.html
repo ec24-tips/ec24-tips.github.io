@@ -33,6 +33,18 @@
     <script src="https://unpkg.com/fuse.js@7.0.0/dist/fuse.basic.min.js"></script>
 
     <script src="main.js" defer></script>
+
+    <script>
+      const UA = navigator.userAgent;
+      const isWebkit =
+	    /\b(iPad|iPhone|iPod)\b/.test(UA) &&
+	    /WebKit/.test(UA) &&
+	    !/Edge/.test(UA) &&
+    !window.MSStream;
+      if (isWebkit) {
+	  alert("We have been made aware of the application not functioning on some iOS versions. If you have the means to help us debug, head over to GitHub (link at the bottom)!");
+      }
+    </script>
   </head>
   <body>
     <div id="main"></div>
