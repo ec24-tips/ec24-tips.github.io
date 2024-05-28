@@ -167,9 +167,10 @@
         "name": "La Stanza",
         "category": "bar",
         "tags": [
-          "aperitivo"
+          "aperitivo",
+	  "breakfast"
         ],
-        "description": "Popular bar for Spritz and <em>aperitivo</em>.",
+        "description": "Popular Italian-style bar for Espresso and <em>aperitivo</em>. Good espresso, honestly priced for the area, but most staff <strong>does not</strong> speak Italian.",
         "links": [
           "https://lastanza.ch/"
         ],
